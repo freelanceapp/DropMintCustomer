@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@android:drawable/editbox_background">
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:textColor="@color/muted_grey"
+       android:text="What's your detergent of choice ?"
+       android:textSize="15sp"
+       android:gravity="center"
+       />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <LinearLayout
+            android:id="@+id/scentedLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/ScentedImage"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+
+                />
+
+            <TextView
+                android:id="@+id/scentedTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Scented"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:textColor="@color/muted_grey"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/UnScentedLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/UnScentedImage"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/UNscentedTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Unscented"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:textColor="@color/muted_grey"/>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/changeDtChoicetxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/muted_blue"
+        android:text=""
+        android:textSize="15sp"
+        android:gravity="center"/>
+
+
+
+</LinearLayout>

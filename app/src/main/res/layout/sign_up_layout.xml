@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/action_bar_heidgt"
+            android:hint="First Name"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_box_state"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/action_bar_heidgt"
+            android:hint="Last Name"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_box_state"/>
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/action_bar_heidgt"
+            android:hint="Email Address"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_box_state"/>
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/action_bar_heidgt"
+            android:hint="Mobile Number"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_box_state"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:id="@+id/date_of_birth_in_sign_up_activity"
+            android:background="@android:drawable/edit_text">
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:hint="Date Of Birth"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:gravity="center|left"
+                android:id="@+id/dob_text_in_sign_up_activity"
+                android:paddingLeft="10dp"
+                android:layout_weight="1"/>
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/calendar_icon"/>
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@android:drawable/edit_text"
+            android:id="@+id/gender_btn_sign_up_activity">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Gender:"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"/>
+
+
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:hint="Male or Female"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:id="@+id/gender_text_in_sign_up_activity"
+                android:layout_weight="1"/>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+        <!--   home addres     -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:id="@+id/home_address_in_sign_up_activity"
+            android:background="@android:drawable/edit_text">
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:hint="Home Address"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+
+
+
+        <!--   Payment method     -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:id="@+id/payment_method_in_sign_up_activity"
+            android:background="@android:drawable/edit_text">
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:hint="payment Method"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:gravity="center|left"
+                android:id="@+id/payment_text_in_sign_up_activity"
+                android:paddingLeft="10dp"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/credit_card_icon"/>
+
+        </LinearLayout>
+
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="terms and conditions"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"/>
+        <!--   Payment method     -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center|left">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="i want to receive exclusive Launder news and Special Offers"
+                    android:layout_marginLeft="5dp"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center|left">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I accept the Launder terms and condition "
+                    android:layout_marginLeft="5dp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+      <Button
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/action_bar_heidgt"
+          android:text="Continue"
+          android:textAppearance="?android:attr/textAppearanceSmall"
+          android:layout_marginLeft="40dp"
+          android:layout_marginRight="40dp"
+          android:layout_marginTop="20dp"
+          android:id="@+id/continue_button_in_sign_up_activity"
+          android:background="@android:drawable/editbox_background_normal"/>
+
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>

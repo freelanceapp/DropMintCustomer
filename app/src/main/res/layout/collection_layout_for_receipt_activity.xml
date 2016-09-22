@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="@android:drawable/edit_text">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tag"
+            android:tint="@color/muted_blue"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Pick Up Address"
+        android:id="@+id/textView14"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/muted_blue"/>
+</LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/muted_blue"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Collection Address:"
+            android:layout_weight="1.5"
+            android:textStyle="bold"
+            android:id="@+id/textView15"
+            android:textColor="@color/muted_blue"/>
+
+        <TextView
+            android:id="@+id/pickup_address"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Mohammed Bin Rashid Boulevard
+Downtown Dubai, PO Box 123234
+Dubai, UAE "
+            android:paddingRight="10dp"
+            android:textColor="@color/muted_grey"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Collection Date"
+            android:textStyle="bold"
+            android:layout_weight="1.5"
+            android:id="@+id/textView17"
+            android:textColor="@color/muted_blue"/>
+
+        <TextView
+            android:id="@+id/collection_date"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="01/01/2015"
+            android:layout_weight="1"
+            android:textColor="@color/muted_grey" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Collection Time"
+            android:layout_weight="1.5"
+            android:textStyle="bold"
+            android:id="@+id/textView19"
+            android:textColor="@color/muted_blue"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="06:30"
+            android:textColor="@color/muted_grey"
+            android:id="@+id/collection_time" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=" PM"
+                android:textColor="@color/muted_grey"/>
+
+        </LinearLayout>
+        </LinearLayout>
+</LinearLayout>

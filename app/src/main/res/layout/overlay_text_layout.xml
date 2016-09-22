@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center|left|bottom"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:layout_height="@dimen/list_item_height">
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Folded Shirts"
+        android:textColor="@color/muted_white"
+        android:id="@+id/product_name_in_item_for_fragment_list"
+            android:layout_marginBottom="2dp"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="wash and iron"
+        android:maxLines="2"
+        android:id="@+id/product_service_name_in_item_for_fragment_list"
+        android:textColor="@color/muted_white"/>
+
+</LinearLayout>

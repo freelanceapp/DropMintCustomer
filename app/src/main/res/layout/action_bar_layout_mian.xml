@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="49dp"
+    android:background="@color/muted_blue">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center|left"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/logo_on_action_bar"
+            android:src="@drawable/white_icon"
+            />
+
+        <TextView
+        android:id="@+id/appname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Laundry App"
+        android:layout_gravity="center"
+        android:textSize="17dp"
+        android:textColor="#ffffff"
+        android:layout_marginLeft="15dp"/>
+
+
+
+
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center|right">
+
+
+        <!--<ImageView-->
+            <!--android:id="@+id/pricelist_activity_btn"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:background="@drawable/listdata"-->
+            <!--android:layout_marginRight="15dp" />-->
+
+        <!--<FrameLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="15dp">-->
+        <!--<ImageView-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:background="@drawable/account_icon"-->
+           <!--android:layout_gravity="center"-->
+            <!--android:id="@+id/my_account_activity_btn"/>-->
+        <!--<TextView-->
+            <!--android:id="@+id/logout_usr"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Logout"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:textAppearance="?android:textAppearanceMedium"-->
+            <!--android:textColor="#ffffff"-->
+            <!--android:layout_marginRight="15dp"/>-->
+        <!--</FrameLayout>-->
+
+        </LinearLayout>
+
+</LinearLayout>

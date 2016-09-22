@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+   <!-- <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Credit Card"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/client_colour"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/credit_card_icon"/>
+    </LinearLayout>   -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/muted_blue"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_heidgt"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:background="@drawable/edit_box_state"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:hint="Card Number"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_heidgt"
+        android:id="@+id/editText2"
+        android:background="@drawable/edit_box_state"
+        android:layout_marginTop="10dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:paddingLeft="10dp"
+        android:hint="Card Holder Name"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="exp. Date"
+                android:id="@+id/textView4" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:id="@+id/editText3"
+                android:hint="DD/MM/YYYY"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/edit_box_state"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/textView33"
+                android:background="@drawable/calendar_icon"
+                android:layout_marginLeft="20dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:inputType="number"
+                android:ems="10"
+                android:hint="CCV"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/edit_box_state"
+                android:id="@+id/editText4" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" sign in with your account"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:id="@+id/email_text"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="15dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:hint="Your Email Address"
+        android:textColorHint="#aa130f0f"
+        android:textColor="#000000"
+        android:background="@drawable/edit_box__login_activity"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        android:padding="10dp"/>
+
+    <EditText
+        android:id="@+id/password_text"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:inputType="textPassword"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:hint="Password"
+        android:textColorHint="#aa130f0f"
+        android:padding="10dp"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        android:background="@drawable/edit_box__login_activity"/>
+
+        <Button
+            android:id="@+id/login_button_loginactivity"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_marginTop="20dp"
+            android:text="Login"
+            android:textColor="#ffffff"
+            android:background="@drawable/loginbuttonbackground" />
+
+    <TextView
+        android:id="@+id/forgotpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:text="Forgot your Password?"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up To New Laundry App"
+        android:textColor="#ffffff"
+        android:padding="12dp"
+        android:alpha="0.70"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:background="@drawable/loginbuttonbackground"
+        android:layout_marginTop="30dp"
+        android:id="@+id/sign_up_buttn_in_login_activity"/>
+
+</LinearLayout>

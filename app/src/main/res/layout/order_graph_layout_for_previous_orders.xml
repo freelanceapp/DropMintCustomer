@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|bottom"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+        <View
+            android:id="@+id/pink"
+            android:layout_width="20dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:background="@color/muted_white"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:background="@drawable/ok_white"
+            android:layout_weight="1"
+            android:id="@+id/imageView2" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1">
+        <View
+            android:id="@+id/placedpink"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:background="@color/muted_white"/>
+        <View
+            android:id="@+id/placedgray"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+
+            android:layout_gravity="center"
+            android:background="@color/muted_blue"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <ImageView
+            android:id="@+id/notcollectedimage"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="32dp"
+            android:background="@drawable/cancel_blue"/>
+
+        <ImageView
+            android:id="@+id/collectedimage"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:layout_height="32dp"
+            android:background="@drawable/ok_white"/>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1">
+        <View
+            android:id="@+id/collectedpink"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:background="@color/muted_white"/>
+        <View
+            android:id="@+id/collectedgray"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+
+            android:layout_gravity="center"
+            android:background="@color/muted_blue"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <ImageView
+            android:id="@+id/notdeliveredimage"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="32dp"
+            android:background="@drawable/cancel_blue"/>
+
+        <ImageView
+            android:id="@+id/deliveredimage"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:layout_height="32dp"
+            android:background="@drawable/ok_white"/>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+        <View
+            android:id="@+id/deliveredgray"
+            android:layout_width="20dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:background="@color/muted_blue"/>
+        <View
+            android:id="@+id/deliveredpink"
+            android:layout_width="20dp"
+            android:layout_height="2dp"
+android:visibility="gone"
+            android:layout_gravity="center"
+            android:background="@color/muted_white"/>
+
+    </FrameLayout>
+
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Order Placed"
+                android:id="@+id/order_placed" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Collected"
+                android:id="@+id/order_collected" />
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Delivered"
+                android:id="@+id/textView31" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,206 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.apporio.johnlaundry.BasketModule.BasketActivity"
+    android:orientation="vertical">
+
+    <include layout="@layout/action_bar_with_back_btn"></include>
+
+
+    <!-- action bar -->
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="49dp"-->
+        <!--android:background="@drawable/layout_states"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="49dp"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_weight="2.5"-->
+
+            <!--android:id="@+id/back_button_in_basket_activity">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="30dp"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:background="@drawable/left_arrow"/>-->
+
+        <!--</LinearLayout>-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+
+            <!--android:gravity="center|left"-->
+            <!--android:layout_weight="1.5"-->
+            <!--android:paddingLeft="10dp">-->
+
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+                <!--android:text="Your Basket"-->
+                <!--android:textColor="@color/muted_white" />-->
+        <!--</LinearLayout>-->
+
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="49dp"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_weight="2">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:background="@drawable/name_only"/>-->
+
+        <!--</LinearLayout>-->
+
+
+    <!--</LinearLayout>-->
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollview">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!-- included com.spinno.laundryapp.views -->
+        <include layout="@layout/address_layout_for_basket"/>
+
+
+        <LinearLayout
+            android:id="@+id/llfordropoffdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@android:drawable/editbox_background">
+
+            <include layout="@layout/delivery_layout_in_basket"></include>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llfordropofftime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@android:drawable/editbox_background">
+
+            <include layout="@layout/drop_off_time_slots"></include>
+
+        </LinearLayout>
+
+
+        <include layout="@layout/detergent_choice_for_in_basket"/>
+        <include layout="@layout/delivery_choice_in_basket"/>
+
+        <include layout="@layout/your_item_layout_for_basket"/>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tipout"
+            android:padding="10dp"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Tip your Minty Men"
+                android:textColor="@color/muted_blue"
+                android:id="@+id/textView2"
+                android:layout_gravity="center_horizontal"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="$ "
+                    android:textColor="@color/muted_blue"
+                    android:id="@+id/te"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"/>
+
+
+            <EditText
+                android:id="@+id/tip"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:hint="Tip To Service Provider"
+                android:gravity="center|left"
+                android:inputType="numberDecimal|numberSigned"
+                android:background="@android:drawable/editbox_background_normal"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/samedaypricelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+        <include layout="@layout/same_day_price_total"></include>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/totalpricelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        <include layout="@layout/check_out_layout_for_basket"/>
+        <!-- <include layout="@layout/checkout_layout_in_basket"/>   -->
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Next"
+            android:id="@+id/next_button_in_basket_activity"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:background="@drawable/loginbuttonbackground"
+            />
+    </LinearLayout>
+</ScrollView>
+
+
+</LinearLayout>

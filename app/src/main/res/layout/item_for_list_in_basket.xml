@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_weight="1">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/product_name_item_inlist_of_basket_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/muted_blue"
+            android:text=""
+            android:textAppearance="?android:textAppearanceSmall"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$ "
+            android:textAppearance="?android:textAppearanceMedium"
+            android:gravity="bottom|left"
+            android:textColor="@color/muted_blue"
+            />
+
+            <TextView
+                android:id="@+id/gross_total_per_unit_in_item_inlist_of_basket_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/muted_blue"
+                android:text=""
+                android:layout_gravity="bottom|left"
+                android:textAppearance="?android:textAppearanceMedium"/>
+
+        </LinearLayout>
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="horizontal"
+    android:gravity="right">
+    <ImageView
+        android:id="@+id/minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/minusitem"/>
+<FrameLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp">
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:background="@drawable/textcircle"/>
+<TextView
+    android:id="@+id/no_of_unit_item_inlist_of_basket_activity"
+    android:layout_width="25dp"
+    android:layout_height="25dp"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:textColor="@color/muted_blue"
+    android:textAppearance="?android:textAppearanceSmall"
+    android:text=""/>
+</FrameLayout>
+    <ImageView
+        android:id="@+id/plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/plusitem"/>
+
+</LinearLayout>
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.apporio.johnlaundry.AccountModule.AccountConfirmationActivity">
+
+
+
+    <include layout="@layout/action_bar_with_back_btn"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="30sp"
+        android:layout_marginRight="30sp"
+        android:layout_marginTop="50dp">
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/action_bar_heidgt"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:background="@drawable/edit_box_state"
+            android:hint="Your Email Address"
+            android:paddingLeft="10dp"/>
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/action_bar_heidgt"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:background="@drawable/edit_box_state"
+            android:hint="Password"
+            android:id="@+id/password_in_confirmation_activity"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/action_bar_heidgt"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:background="@drawable/edit_box_state"
+            android:hint="Confirm Password"
+            android:id="@+id/confirmation_password_in_confirmation_activity"/>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/action_bar_heidgt"
+            android:gravity="center|right"
+            android:paddingRight="20dp"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:background="@drawable/edit_box_state"
+                android:text="Sign in "
+                android:id="@+id/create_account_btn_in_accountConfirmationActivity"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

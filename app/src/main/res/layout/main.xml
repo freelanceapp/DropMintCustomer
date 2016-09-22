@@ -1,0 +1,90 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:id="@+id/login_background_in_hellofacebook_Activity"/>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/main_ui_container">
+
+            <include layout="@layout/action_bar_with_back_btn"/>
+
+
+
+
+            <!-- <LinearLayout
+                 android:layout_width="150dp"
+                 android:layout_height="0dp"
+                 android:layout_gravity="center_horizontal"
+                 android:gravity="center_horizontal"
+                 android:orientation="vertical"
+                 >
+                 <TextView
+                     android:id="@+id/greeting"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="10dp"
+                     android:layout_gravity="center"
+                     android:textColor="#333"
+                     android:textSize="18sp"/>
+                 <com.facebook.login.widget.ProfilePictureView
+                     android:id="@+id/profilePicture"
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:gravity="center_horizontal"
+                     android:layout_marginBottom="10dp"
+                     facebook:com_facebook_preset_size="normal"/>
+                 <Button
+                     android:id="@+id/postStatusUpdateButton"
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:text="Post Status Update"
+                     />
+                 <Button
+                     android:id="@+id/postPhotoButton"
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:text="Post Photo"
+                     />
+
+             </LinearLayout>   -->
+
+
+            <include layout="@layout/login_layout"/>
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="OR"-->
+                <!--android:textColor="#ffffff"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_marginTop="10dp"/>-->
+
+
+                <!--<TextView-->
+                    <!--android:id="@+id/facebooklogin"-->
+
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textAppearance="?android:textAppearanceMedium"-->
+                    <!--android:text="Login with facebook ?"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:textColor="#ffffff"/>-->
+
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/edit_text_focus"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/create_icon"/>
+                <EditText
+                    android:id="@+id/firstname_registration"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/action_bar_heidgt"
+                    android:hint="First Name"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:background="@android:color/transparent"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="#bbbbbb"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/create_icon"/>
+
+                <EditText
+                    android:id="@+id/lastname_registration"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/action_bar_heidgt"
+                android:hint="Last Name"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+
+                    android:background="@android:color/transparent"/>
+</LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#bbbbbb"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/email_icon"/>
+
+
+                <EditText
+                    android:id="@+id/email_registration"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/action_bar_heidgt"
+                    android:hint="Email Address"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="center|left"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+
+                    android:paddingLeft="10dp"
+                    android:background="@android:color/transparent"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#bbbbbb"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/mobile_icon"/>
+
+                <EditText
+                    android:id="@+id/mobile_no_registration"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/action_bar_heidgt"
+                    android:hint="Mobile No."
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:inputType="phone"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+
+                    android:background="@android:color/transparent"/>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#bbbbbb"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@android:color/transparent">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/address_icon"/>
+
+                <com.apporio.johnlaundry.CustomAutoCompleteTextView
+                    android:id="@+id/address_registration"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/action_bar_heidgt"
+                    android:hint="Home Address"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:layout_weight="1"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:background="@android:color/transparent">
+
+</com.apporio.johnlaundry.CustomAutoCompleteTextView>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#bbbbbb"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:id="@+id/password_in_sign_up_activity"
+                android:background="@android:color/transparent">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/password"/>
+
+                <EditText
+                    android:id="@+id/password_registration"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/action_bar_heidgt"
+                    android:hint="Password"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+
+                    android:inputType="textPassword"
+                    android:background="@android:color/transparent"/>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#bbbbbb"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:id="@+id/confirm_password_in_sign_up_activity"
+                android:background="@android:color/transparent">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/password"/>
+
+                <EditText
+                    android:id="@+id/confirm_Password_Registration"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/action_bar_heidgt"
+                    android:hint="Confirm Password"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="center|left"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+
+                    android:inputType="textPassword"
+                    android:paddingLeft="10dp"
+                    android:background="@android:color/transparent"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Continue"
+            android:id="@+id/continue_button_in_sign_up_activity"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:background="@drawable/loginbuttonbackground" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="49dp"
+    android:gravity="center"
+    android:padding="10dp"
+    android:id="@+id/cart_layot"
+    android:background="@color/muted_blue">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:gravity="center|right">
+
+        <ImageView
+            android:id="@+id/setting_btn_in_main_Activity_with_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/settings"/>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:layout_marginRight="40dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:text="Estimate"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center"
+        android:layout_marginRight="5dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="$ "
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffff"
+                android:text="0.00"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:id="@+id/gross_total"/>
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:layout_gravity="right"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"/>
+        </LinearLayout>
+            <ImageView
+                android:id="@+id/cartimage"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+                android:src="@drawable/cart_icon"/>
+            <TextView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:background="@drawable/pinktextcircle"
+                android:textColor="#ffffff"
+                android:text="0"
+                android:padding="1dp"
+                android:layout_gravity="right"
+                android:id="@+id/total_item"
+                android:gravity="center"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

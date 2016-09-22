@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Address "
+        android:textColor="@color/muted_blue"
+        android:id="@+id/textView2"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:layout_marginLeft="5dp"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/muted_blue"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp">
+
+        <!--<com.apporio.johnlaundry.fragment xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--android:id="@+id/map"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="180dp"-->
+            <!--class="com.google.android.gms.maps.SupportMapFragment"/>-->
+
+        <!--<fragment-->
+            <!--android:id="@+id/map"-->
+            <!--android:name="com.google.android.gms.maps.MapFragment"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="180dp" />-->
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapgh"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center|left"
+            android:layout_marginTop="8dp">
+
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/home_icon"/>
+
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:hint="Home Address"
+                android:gravity="center|left"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:id="@+id/collection_address_edittext_in_basket_activity"
+                android:textColorHint="@color/muted_grey"
+                android:textColor="@color/muted_blue"/>
+
+        </LinearLayout>
+
+         <View
+    android:layout_width="match_parent"
+    android:layout_height="0.5dp"
+             android:background="@color/muted_grey"
+             android:layout_marginTop="5dp"
+             android:layout_marginBottom="5dp"
+             android:layout_marginLeft="20dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center|left"
+            android:layout_marginTop="10dp">
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/note_icon"/>
+
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:hint="Delivery Notes &amp; Special Instructions"
+                android:gravity="center|left"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/delivery_notes_in_basket_activity_edt"
+                android:background="@android:color/transparent"
+                android:textColorHint="@color/muted_grey"
+                android:textColor="@color/muted_blue"/>
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    <include layout="@layout/collection_layout_in_basket"/>
+
+
+
+
+</LinearLayout>

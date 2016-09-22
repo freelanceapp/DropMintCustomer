@@ -1,0 +1,13 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|top"
+    android:orientation="vertical"
+    tools:context="com.apporio.johnlaundry.AccountModule.LoginCleanline">
+
+    <include layout="@layout/action_bar_with_back_btn"/>
+
+    <include layout="@layout/login_layout"/>
+
+</LinearLayout>

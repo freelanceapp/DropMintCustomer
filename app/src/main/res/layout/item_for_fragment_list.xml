@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_height"
+            android:scaleType="centerCrop"
+            android:id="@+id/banner_in_fragment_list"
+           />
+        <include layout="@layout/overlay_gradient_layout"/>
+
+
+
+        <include layout="@layout/overlay_button_layout"/>
+        <include layout="@layout/overlay_text_layout"/>
+        <include layout="@layout/overlay_no_of_unit"/>
+
+
+
+
+
+
+    </FrameLayout>
+
+</LinearLayout>

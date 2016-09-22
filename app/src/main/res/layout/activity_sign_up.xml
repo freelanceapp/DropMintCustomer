@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.apporio.johnlaundry.AccountModule.SignUpActivity">
+
+    <include layout="@layout/action_bar_with_back_btn"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <include layout="@layout/sign_up_layout_new"/>
+
+    </ScrollView>
+
+</LinearLayout>

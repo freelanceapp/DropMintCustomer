@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/basket"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Your Items"
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/muted_blue"
+        android:id="@+id/textView2"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/muted_blue"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_view_in_item_for_basket"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/your_item_layout_in_basket_activity"
+        android:background="@android:drawable/editbox_background">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:hint="Add More Items....."
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:textColor="@color/muted_blue"
+            android:textColorHint="@color/muted_grey"/>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@drawable/plusitem"
+            android:gravity="right"
+            android:tint="@color/muted_blue"/>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:gravity="center|left">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="0sp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:hint="Special instructions"
+            android:id="@+id/special_instruction_in_your_item_layout"
+            android:paddingLeft="10dp"
+            android:gravity="center|left"
+            android:background="@android:drawable/editbox_background"/>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_heidgt"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="@dimen/action_bar_heidgt"
+            android:layout_height="@dimen/action_bar_heidgt"
+            android:gravity="center"
+            android:id="@+id/back_button_on_action_bar"
+            android:background="@drawable/layout_states">
+
+            <ImageView
+                android:id="@+id/back_button_how_it_works"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/left_arrow"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/action_bar_heidgt"
+            android:gravity="center|left"
+            android:paddingLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/layout_states">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Activity Name"
+                android:id="@+id/activity_name_on_Action_bar"
+                android:textColor="#ffffff"/>
+
+
+        </LinearLayout>
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="49dp"-->
+            <!--android:background="@drawable/layout_states"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_weight="2">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:background="@drawable/name_only"/>-->
+
+        <!--</LinearLayout>-->
+
+    </LinearLayout>
+
+</LinearLayout>

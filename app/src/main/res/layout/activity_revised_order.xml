@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.apporio.johnlaundry.startUpScreen.RevisedOrderActivity">
+
+
+    <include layout="@layout/action_bar_with_back_btn"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:drawable/editbox_background"
+                android:padding="5dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pickup Details"
+                    android:gravity="center"
+                    android:textSize="18dp"
+                    android:textColor="@color/muted_blue"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Picked up Address :"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:textColor="@color/muted_grey"/>
+
+                    <TextView
+                        android:id="@+id/pickup_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/muted_grey"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Picked up Date :"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:textColor="@color/muted_grey"/>
+
+                    <TextView
+                        android:id="@+id/pickup_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/muted_grey"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Picked up Time :"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:textColor="@color/muted_grey"/>
+
+                    <TextView
+                        android:id="@+id/pickup_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/muted_grey"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:drawable/editbox_background"
+                android:padding="5dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery Details"
+                    android:gravity="center"
+                    android:textColor="@color/muted_blue"
+                    android:textSize="18dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Delivery Address :"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:textColor="@color/muted_grey"/>
+
+                    <TextView
+                        android:id="@+id/delivery_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/muted_grey"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Delivery Date :"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:textColor="@color/muted_grey"/>
+
+                    <TextView
+                        android:id="@+id/delivery_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/muted_grey"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Delivery Time :"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:textColor="@color/muted_grey"/>
+
+                    <TextView
+                        android:id="@+id/delivery_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/muted_grey"/>
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:drawable/editbox_background"
+                android:layout_marginTop="5dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Order Details"
+                    android:gravity="center"
+                    android:textColor="@color/muted_blue"
+                    android:textSize="18dp"/>
+
+                <ListView
+                    android:id="@+id/item_details_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:dividerHeight="3dp"
+                    android:background="#f5f3f3">
+
+                </ListView>
+
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:background="@color/muted_blue"></View>-->
+
+
+                <!--<TextView-->
+                    <!--android:id="@+id/edit_product"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:textColor="@color/muted_white"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:text="Edit Order ?"-->
+                    <!--android:gravity="right"-->
+                    <!--android:textSize="15dp"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:layout_marginBottom="5dp"-->
+                    <!--android:background="@drawable/decline_btn"-->
+                    <!--android:paddingRight="30dp"-->
+                    <!--android:paddingLeft="30dp"-->
+                    <!--android:paddingTop="5dp"-->
+                    <!--android:paddingBottom="5dp"/>-->
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/second_item_details_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:drawable/editbox_background"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Revised Products"
+                    android:gravity="center"
+                    android:textColor="@color/muted_blue"
+                    android:textSize="18dp"/>
+
+                <ListView
+                    android:id="@+id/second_item_details_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:dividerHeight="8dp"
+                    android:background="#f5f3f3">
+
+                </ListView>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:drawable/editbox_background"
+                android:padding="5dp"
+                android:layout_marginTop="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Order date :"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:textColor="@color/muted_grey"/>
+
+                    <TextView
+                        android:id="@+id/order_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/muted_grey"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Delivery note :"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:textColor="@color/muted_grey"/>
+
+                    <TextView
+                        android:id="@+id/delivery_note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/muted_grey"/>
+
+                </LinearLayout>
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_marginTop="5dp">-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Special Instructions :"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:textColor="@color/muted_grey"/>-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/special_instruction"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:textColor="@color/muted_grey"/>-->
+
+                <!--</LinearLayout>-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Total Price :"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:textColor="@color/muted_grey"/>
+
+                    <TextView
+                        android:id="@+id/total_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/muted_grey"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Total Quantity :"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:textColor="@color/muted_grey"/>
+
+                    <TextView
+                        android:id="@+id/total_quantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/muted_grey"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:paddingRight="50dp">
+
+
+
+                <TextView
+                    android:id="@+id/ok_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="OK"
+                    android:gravity="center"
+                    android:textColor="@color/muted_white"
+                    android:background="@drawable/loginbuttonbackground"
+                    android:textSize="15dp"
+                    android:padding="10dp"
+                   />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

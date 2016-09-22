@@ -1,0 +1,183 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center|top"
+
+    tools:context="com.apporio.johnlaundry.MenuModule.SettingsActivity">
+
+    <include layout="@layout/action_bar_with_back_btn"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/edit_text_focus">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/mobile_icon"/>
+
+                <EditText
+                    android:id="@+id/mobile_no_settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/action_bar_heidgt"
+                    android:hint="Mobile No."
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+
+                    android:inputType="phone"
+                    android:background="@android:color/transparent"/>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#bbbbbb"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@android:color/transparent">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/address_icon"/>
+
+                <com.apporio.johnlaundry.CustomAutoCompleteTextView
+                    android:id="@+id/address_settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/action_bar_heidgt"
+                    android:hint="Home Address"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+
+                    android:textColor="#000"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:background="@android:color/transparent">
+
+                </com.apporio.johnlaundry.CustomAutoCompleteTextView>
+
+
+            </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#bbbbbb"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:id="@+id/password_in_sign_up_activity"
+                android:background="@android:color/transparent">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/password"/>
+
+                <EditText
+                    android:id="@+id/password_settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/action_bar_heidgt"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+
+                    android:background="@android:color/transparent"/>
+
+            </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#bbbbbb"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:id="@+id/confirm_password_in_sign_up_activity"
+                android:background="@android:color/transparent">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/password"/>
+
+                <EditText
+                    android:id="@+id/confirm_Password_settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/action_bar_heidgt"
+                    android:hint="Confirm Password"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+
+                    android:inputType="textPassword"
+                    android:background="@android:color/transparent"/>
+
+            </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#bbbbbb"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/save_button_in_setting_activity"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Save"
+            android:alpha="0.70"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/loginbuttonbackground" />
+
+
+</LinearLayout>
