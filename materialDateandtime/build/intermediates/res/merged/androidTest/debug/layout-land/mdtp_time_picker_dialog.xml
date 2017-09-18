@@ -60,4 +60,4 @@
         </FrameLayout>
         <include layout="@layout/mdtp_done_button" />
     </LinearLayout>
-</LinearLayout><!-- From: file:/E:/android%20projects/Laundry%20Projects/new%20john%20Laundry%20App/New%20John%20Laundry/materialDateandtime/src/main/res/layout-land/mdtp_time_picker_dialog.xml --><!-- From: file:/E:/android%20projects/Laundry%20Projects/new%20john%20Laundry%20App/New%20John%20Laundry/materialDateandtime/build/intermediates/bundles/debug/res/layout-land/mdtp_time_picker_dialog.xml -->
+</LinearLayout>

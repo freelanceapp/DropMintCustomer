@@ -14,9 +14,12 @@ import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.NetworkError;
+import com.android.volley.NoConnectionError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.google.gson.Gson;
@@ -69,7 +72,7 @@ public class ForgotPassword extends Activity {
 
         sm = new SessionManager(ForgotPassword.this);
         queue = VolleySingleton.getInstance(ForgotPassword.this).getRequestQueue();
-
+        activityname.setText("Forgot Password");
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -93,7 +96,7 @@ public class ForgotPassword extends Activity {
                             e.printStackTrace();
                         }
                     } else {
-                        Toast.makeText(ForgotPassword.this, "Please Enter your Registered email", Toast.LENGTH_LONG).show();
+                        Toast.makeText(ForgotPassword.this, "Please Enter Valid Registered email", Toast.LENGTH_LONG).show();
 
                     }
                 }
@@ -116,70 +119,83 @@ public class ForgotPassword extends Activity {
     public void docallAPIforforgotpassword(String email) {
         if (checkInternetConnectivity()) {
             try {
-              //  doForgotAPI();
+               doForgotAPI();
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            pDialog.show();
+           // pDialog.show();
+        }else {
+            Toast.makeText(ForgotPassword.this, "Network Error", Toast.LENGTH_SHORT).show();
         }
 
     }
 
-//    private void doForgotAPI() {
-//
-//       // String forgotpasswordurl = "http://keshavgoyal.com/laundry_app1/api/forgot_pass.php?email=" + email;
-//
-//        String forgotpasswordurl = URLS.forgotpasswordurl.concat(email);
-//        forgotpasswordurl=forgotpasswordurl.replace(" ","%20");
-//
-//        sr = new StringRequest(Request.Method.POST,forgotpasswordurl, new Response.Listener<String>() {
-//            @Override
-//            public void onResponse(String response) {
-//                Log.e("Sucess", "" + response);
-////                Toast.makeText(Forgot_password.this , ""+response ,Toast.LENGTH_SHORT).show();
-//
-//                GsonBuilder gsonBuilder = new GsonBuilder();
-//                final Gson gson = gsonBuilder.create();
-//
-//                forgotsettergetter = gson.fromJson(response, Forgotpasswordsettergetter.class);
-//                if (forgotsettergetter.result.equals("1")){
-//
-//                    Intent intent = new Intent(ForgotPassword.this,HelloFacebookSampleActivity.class);
-//                    startActivity(intent);
-//                    pDialog.dismiss();
-//
-//                }
-//                else {
-//                    Toast.makeText(getApplicationContext(), "Please enter correct details", Toast.LENGTH_SHORT).show();
-//                    pDialog.dismiss();
-//                }
-//            }
-//        }, new Response.ErrorListener() {
-//            @Override
-//            public void onErrorResponse(VolleyError error) {
-//                Log.e("Sucess", "" + error.toString());
-//            }
-//        }){
-//            @Override
-//            protected Map<String,String> getParams(){
-//                Map<String,String> params = new HashMap<String, String>();
-//
-//                return params;
-//            }
-//
-//            @Override
-//            public Map<String, String> getHeaders() throws AuthFailureError {
-//                Map<String,String> params = new HashMap<String, String>();
-//                params.put("Content-Type","application/x-www-form-urlencoded");
-//                return params;
-//            }
-//        };
-//        sr.setRetryPolicy(new DefaultRetryPolicy(30000,
-//                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-//                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-//
-//
-//        queue.add(sr);
-//    }
+    private void doForgotAPI() {
+
+       // String forgotpasswordurl = "http://keshavgoyal.com/laundry_app1/api/forgot_pass.php?email=" + email;
+
+        String forgotpasswordurl = URLS.forgotpasswordurl.concat(email);
+        forgotpasswordurl=forgotpasswordurl.replace(" ","%20");
+
+        sr = new StringRequest(Request.Method.POST,forgotpasswordurl, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                Log.e("Sucess", "" + response);
+//                Toast.makeText(Forgot_password.this , ""+response ,Toast.LENGTH_SHORT).show();
+
+                pDialog.dismiss();
+
+                GsonBuilder gsonBuilder = new GsonBuilder();
+                final Gson gson = gsonBuilder.create();
+
+                forgotsettergetter = gson.fromJson(response, Forgotpasswordsettergetter.class);
+                if (forgotsettergetter.result.equals("1")){
+
+                    Intent intent = new Intent(ForgotPassword.this,HelloFacebookSampleActivity.class);
+                    startActivity(intent);
+                   // pDialog.dismiss();
+                    finish();
+
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "Please enter correct details", Toast.LENGTH_SHORT).show();
+                    pDialog.dismiss();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("Sucess", "" + error.toString());
+                if (error instanceof NetworkError){
+                    Toast.makeText(ForgotPassword.this, "No Internet !!", Toast.LENGTH_SHORT).show();
+                }else if (error instanceof NoConnectionError){
+                    Toast.makeText(ForgotPassword.this, "No Internet", Toast.LENGTH_SHORT).show();
+                }else if (error instanceof TimeoutError){
+                    Toast.makeText(ForgotPassword.this, "Plz Try Again !!", Toast.LENGTH_SHORT).show();
+                }
+                pDialog.dismiss();
+            }
+        }){
+            @Override
+            protected Map<String,String> getParams(){
+                Map<String,String> params = new HashMap<String, String>();
+
+                return params;
+            }
+
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String,String> params = new HashMap<String, String>();
+                params.put("Content-Type","application/x-www-form-urlencoded");
+                return params;
+            }
+        };
+        sr.setRetryPolicy(new DefaultRetryPolicy(30000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+        pDialog.show();
+        queue.add(sr);
+    }
 
 }

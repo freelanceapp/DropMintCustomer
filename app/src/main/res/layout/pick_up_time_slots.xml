@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Select Pick-Up Time Slot"
+        android:text="Select Pick Up Time Slot"
         android:textColor="@color/muted_blue"
         android:id="@+id/textView2"
         />

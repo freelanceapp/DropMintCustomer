@@ -64,6 +64,8 @@ public class VIEW_ORDER_MOST_INNERDATA {
     @SerializedName("payment_platform")
     public String payment_platform;
 
+
+
     @SerializedName("order_status")
     public String order_status;
 

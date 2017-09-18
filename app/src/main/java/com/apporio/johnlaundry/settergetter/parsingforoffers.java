@@ -10,6 +10,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.apporio.johnlaundry.MenuModule.SettingsActivity;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
@@ -34,13 +35,15 @@ public class parsingforoffers {
     public static ArrayList<String> descp = new ArrayList<String>();
     public static ArrayList<String> tagline = new ArrayList<String>();
     public static ArrayList<String> imagesss = new ArrayList<String>();
-    public static ArrayList<String> postid = new ArrayList<String>();
+    public static ArrayList<String> placeid = new ArrayList<String>();
 
-    private static final String API_KEY = "AIzaSyCi1WUF8QjcbteU9t9KL0JlmCh_3r2vVE4";
+    private static final String API_KEY = "AIzaSyDnyI32QF2Sqe4k_jQABCZqZJFC2JCWlOw";
 
-    public static void parsing(final Context activity, String s){
+    public static void parsing(final Context activity, String s, final String signup){
 
-        String locationurl2 = "https://maps.googleapis.com/maps/api/place/autocomplete/json?&components=country:uk&input="+s+"&key=AIzaSyCC3Ci--XByh-o-ukFw0IBOGD1of7hglA4";
+        //url for specific country
+       // "https://maps.googleapis.com/maps/api/place/autocomplete/json?&components=country:uk&input="+s+"&key=AIzaSyCC3Ci--XByh-o-ukFw0IBOGD1of7hglA4";
+        String locationurl2 = "https://maps.googleapis.com/maps/api/place/autocomplete/json?&input="+s+"&key=AIzaSyDA4Yw4dv5X-OJWph49AZsvjT3cIFvBg9k";
 
         locationurl2= locationurl2.replace(" ","%20");
         // Log.e("url", "" + locationurl2);
@@ -50,7 +53,7 @@ public class parsingforoffers {
             public void onResponse(String response) {
 
                 descp.clear();
-
+                placeid.clear();
                 try {
                     GsonBuilder gsonBuilder = new GsonBuilder();
                     final Gson gson = gsonBuilder.create();
@@ -61,6 +64,7 @@ public class parsingforoffers {
                     data_list1=received2.predictionsplace;
                     for(int i=0;i<data_list1.size();i++){
                         descp.add(data_list1.get(i).description);
+                        placeid.add(data_list1.get(i).place_id);
 
 //                        Toast.makeText(activity,"hka" +descp, Toast.LENGTH_SHORT).show();
                     }
@@ -68,8 +72,17 @@ public class parsingforoffers {
                     //  List<HashMap<String, String>> result =descp;
 
                         // Setting the adapter
+
+                    if (signup.equals("Signup")){
                         ArrayAdapter adapter = new ArrayAdapter(activity, R.layout.auto_complete_layout, R.id.mobcode,descp);
                         SignUpActivity.HomeAddress_text.setAdapter(adapter);
+
+                    }else {
+                        ArrayAdapter adapter = new ArrayAdapter(activity, R.layout.auto_complete_layout, R.id.mobcode,descp);
+                        SettingsActivity.HomeAddress_text.setAdapter(adapter);
+
+                    }
+
 
                 } catch (JsonSyntaxException e) {
                     e.printStackTrace();

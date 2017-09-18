@@ -5,243 +5,6 @@
     android:layout_height="wrap_content"
      >
 
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="5dp"
-        android:layout_marginBottom="5dp"
-        android:background="@android:drawable/editbox_background">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Please Select Delivery Day"
-            android:textColor="@color/muted_blue"
-            android:id="@+id/textView2hg"
-            android:textStyle="bold"/>
-
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/muted_blue"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"/>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="5dp">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-
-        <CheckBox
-            android:id="@+id/checkbox1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:button="@drawable/custom_radio_button"
-            android:text="  Same Day"
-            android:textSize="18dp"
-            android:layout_gravity="center"
-            android:textColor="@color/muted_blue"/>
-
-            <LinearLayout
-                android:visibility="gone"
-                android:orientation="vertical"
-                android:id="@+id/samedayoverlaylayout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                         >
-
-
-            </LinearLayout>
-
-
-        </FrameLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.7">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_gravity="center">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="+.25c per LB(Eco/Prime)"
-                        android:textColor="@color/muted_grey"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="+.50c per Dry Cleaning Item"
-                        android:textColor="@color/muted_grey"
-                        android:layout_marginTop="3dp"/>
-
-                </LinearLayout>
-
-
-               </LinearLayout>
-
-
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:background="@color/muted_grey"
-            android:layout_marginTop="3dp"
-            android:layout_marginBottom="3dp"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="5dp">
-
-
-        <CheckBox
-            android:id="@+id/checkbox2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:button="@drawable/custom_radio_button"
-            android:text="  Next Day"
-            android:textSize="18dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:textColor="@color/muted_blue"/>
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="My order is only Wash N Fold"
-                android:textColor="@color/muted_grey"
-                android:layout_weight="0.7"
-                android:layout_gravity="center"
-                android:maxLines="2"/>
-
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:background="@color/muted_grey"
-            android:layout_marginTop="3dp"
-            android:layout_marginBottom="3dp"/>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp">
-
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center">
-
-
-        <CheckBox
-            android:id="@+id/checkbox3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:button="@drawable/custom_radio_button"
-            android:text="  Next Day"
-            android:textSize="18dp"
-            android:textColor="@color/muted_blue"/>
-
-                <LinearLayout
-                    android:visibility="gone"
-                    android:orientation="vertical"
-                    android:id="@+id/nextdayoverlaylayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    >
-
-
-                </LinearLayout>
-
-
-            </FrameLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="My order is either only Dry Cleaning or Wash N Fold + Dry Cleaning"
-                android:textColor="@color/muted_grey"
-                android:layout_weight="0.7"
-                android:layout_gravity="center"
-                android:maxLines="2"/>
-
-
-         </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:background="@color/muted_grey"
-            android:layout_marginTop="3dp"
-            android:layout_marginBottom="3dp"/>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp">
-
-
-            <CheckBox
-                android:id="@+id/checkbox4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:button="@drawable/custom_radio_button"
-                android:text=" "
-                android:textSize="18dp"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:textColor="@color/muted_blue"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Select your Delivery Date beginning at 2 Day Delivery"
-                android:textColor="@color/muted_grey"
-                android:layout_weight="0.7"
-                android:layout_gravity="center"
-                android:maxLines="2"/>
-
-
-        </LinearLayout>
-
-
-
-    </LinearLayout>
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -253,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Pick up"
+            android:text="Pick Up"
             android:textColor="@color/muted_blue"
             android:id="@+id/textView2"
             />
@@ -300,16 +63,380 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:drawable/editbox_background">
 
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:background="@android:drawable/editbox_background"
-         android:layout_marginTop="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Please Select Delivery Day"
+            android:textColor="@color/muted_blue"
+            android:id="@+id/textView2hg"
+            android:textStyle="bold"/>
 
-          <include layout="@layout/pick_up_time_slots"></include>
 
-      </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/muted_blue"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center">
+
+        <CheckBox
+            android:id="@+id/checkbox1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@drawable/custom_radio_button"
+            android:text="  Same Day"
+            android:textSize="18dp"
+            android:textColor="@color/muted_blue"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:id="@+id/samedayoverlaylayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                         >
+
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/firstcatcharge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Wash N Fold Only"
+                        android:textColor="@color/muted_grey"
+                        android:gravity="center|left"/>
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/secondcatcharge"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text=""-->
+                        <!--android:textColor="@color/muted_grey"-->
+                        <!--android:layout_marginTop="3dp"/>-->
+
+                </LinearLayout>
+
+
+               </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/muted_grey"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center">
+
+                <CheckBox
+                    android:id="@+id/same_day_second_check"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/custom_radio_button"
+                    android:text="  Same Day"
+                    android:textSize="18dp"
+                    android:textColor="@color/muted_blue"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="center"/>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:id="@+id/samedaysecondoverlaylayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/second"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dry Cleaning Only or Both"
+                        android:textColor="@color/muted_grey"
+                        android:gravity="center|left"/>
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/secondcatcharge"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text=""-->
+                    <!--android:textColor="@color/muted_grey"-->
+                    <!--android:layout_marginTop="3dp"/>-->
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/muted_grey"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"/>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center">
+
+        <CheckBox
+            android:id="@+id/checkbox2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@drawable/custom_radio_button"
+            android:text="  Next Day"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+             android:layout_gravity="center"
+            android:textColor="@color/muted_blue"/>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:id="@+id/nextdayfirstoverlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wash N Fold Only"
+                android:textColor="@color/muted_grey"
+                android:layout_weight="0.7"
+                android:layout_gravity="center"
+                android:maxLines="2"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/muted_grey"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center">
+
+
+        <CheckBox
+            android:id="@+id/checkbox3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@drawable/custom_radio_button"
+            android:text="  Next Day"
+            android:textSize="18dp"
+            android:textColor="@color/muted_blue"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"/>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:id="@+id/nextdayoverlaylayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dry Cleaning Only or Both"
+                android:textColor="@color/muted_grey"
+                android:layout_weight="0.7"
+                android:layout_gravity="center"
+                android:maxLines="2"/>
+
+
+         </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/muted_grey"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center">
+
+
+            <CheckBox
+                android:id="@+id/checkbox4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@drawable/custom_radio_button"
+                android:text=" "
+                android:textSize="18dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textColor="@color/muted_blue"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:id="@+id/selectdateoverlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wash N Fold or Dry Cleaning or Both"
+                android:textColor="@color/muted_grey"
+                android:layout_weight="0.7"
+                android:layout_gravity="center"
+                android:maxLines="2"/>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
 
     <!--<LinearLayout-->
         <!--android:layout_width="match_parent"-->

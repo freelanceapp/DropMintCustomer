@@ -7,6 +7,10 @@
     android:layout_margin="10dp"
     android:padding="5dp">
 
+
+
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,6 +20,52 @@
         android:textStyle="bold"
         android:id="@+id/textView13"
         android:textColor="@color/muted_blue"/>
+
+
+    <LinearLayout
+        android:id="@+id/txt_cart_instant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/head"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Instant Order Activated"
+            android:gravity="center"
+            android:textColor="@color/muted_blue"
+            android:textColorHint="@color/muted_grey"
+            android:visibility="visible"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:src="@drawable/inst_img"/>
+
+
+
+        <TextView
+            android:id="@+id/bo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="We will pickup whatever dirty laundry you have for us"
+            android:gravity="center"
+            android:textColor="@color/muted_blue"
+            android:textColorHint="@color/muted_grey"
+            android:visibility="visible"
+            android:layout_gravity="center"/>
+
+
+    </LinearLayout>
+
 
     <ListView
         android:layout_width="match_parent"

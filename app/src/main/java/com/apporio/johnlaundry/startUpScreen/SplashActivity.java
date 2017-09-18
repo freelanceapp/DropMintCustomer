@@ -9,14 +9,13 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.view.animation.LinearInterpolator;
-import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.apporio.johnlaundry.AccountModule.HelloFacebookSampleActivity;
 import com.apporio.johnlaundry.GCMclasses.GCMConstants;
 import com.apporio.johnlaundry.R;
+import com.apporio.johnlaundry.activity.MainActivity;
 import com.apporio.johnlaundry.logger.Logger;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
@@ -53,15 +52,15 @@ public class SplashActivity extends Activity {
         setContentView(R.layout.activity_splash);
 
        // textimage = (ImageView)findViewById(R.id.splashimage);
-        laundry = (ImageView)findViewById(R.id.laundrytxt);
+     //   laundry = (ImageView)findViewById(R.id.laundrytxt);
 
 //        animationSlideOutRight= AnimationUtils.loadAnimation(this, R.anim.abc_grow_fade_in_from_bottom);
   //      animationSlideOutRight.setDuration(1000);
     //    textimage.startAnimation(animationSlideOutRight);
 
-        YoYo.with(Techniques.ZoomInUp)
-                .duration(2500)
-                .playOn(findViewById(R.id.laundrytxt));
+//        YoYo.with(Techniques.ZoomInUp)
+//                .duration(2500)
+//                .playOn(findViewById(R.id.laundrytxt));
 
 //        YoYo.with(Techniques.DropOut)
 //                .duration(2500)
@@ -118,7 +117,7 @@ public class SplashActivity extends Activity {
             @Override
             public void run() {
                 if (!userid.equals("")){
-                    Intent i = new Intent(SplashActivity.this, MainActivityWithicon.class);
+                    Intent i = new Intent(SplashActivity.this, MainActivity.class);
                     startActivity(i);
 
                 }else {
@@ -130,6 +129,10 @@ public class SplashActivity extends Activity {
             }
 
         }, SPLASH_TIME_OUT);
+
+
+
+
 
     }
     //////////////////////////////////////////////////gcm code

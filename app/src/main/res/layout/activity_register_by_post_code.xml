@@ -32,7 +32,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter your postcode to see if we cover your area."
+        android:text="Please enter your zip code to see if we service your area"
         android:layout_gravity="center"
         android:textColor="#ffffff"
         android:textStyle="bold"
@@ -58,11 +58,11 @@
             android:id="@+id/pincode_text"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:hint="Enter Post Code"
+            android:hint="Zip Code"
             android:layout_weight="0.5"
             android:imeOptions="actionNext"
             android:singleLine="true"
-
+            android:inputType="number"
             android:layout_marginRight="4dp"
             android:background="@android:drawable/editbox_background"/>
 

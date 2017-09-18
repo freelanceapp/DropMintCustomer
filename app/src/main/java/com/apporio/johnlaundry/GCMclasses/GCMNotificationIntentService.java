@@ -61,7 +61,7 @@ public class GCMNotificationIntentService extends GcmListenerService {
         mNotifyBuilder = new NotificationCompat.Builder(this)
                 .setContentTitle("Laundry")
                 .setContentText("Revised Order" + message)
-                .setSmallIcon(R.drawable.app_icon);
+                .setSmallIcon(R.drawable.dropmint_new_app_logo);
 
         // Set pending intent
         mNotifyBuilder.setContentIntent(resultPendingIntent);

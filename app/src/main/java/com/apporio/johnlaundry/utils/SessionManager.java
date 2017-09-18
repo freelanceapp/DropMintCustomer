@@ -43,6 +43,11 @@ public class SessionManager {
     public static final String KEY_Password= "password";
     public static final String KEY_DeviceID= "deviceid";
     public static final String KEY_CategoryId = "categoryid";
+    public static final String KEY_Appartment= "Appartment";
+    public static final String KEY_Lat= "lat";
+    public static final String KEY_Long = "long";
+
+
     // Constructor
     public SessionManager(Context context){
         this._context = context;
@@ -57,7 +62,7 @@ public class SessionManager {
 
 
      public void createLoginSession(String userid ,String firstname,String lastname ,String email,String phone,String homeaddress
-             ,String password){
+             ,String password ){
         // Storing login value as TRUE
         editor.putBoolean(IS_LOGIN, true);
         // Storing name in pref
@@ -68,9 +73,18 @@ public class SessionManager {
          editor.putString(KEY_Phone , phone);
          editor.putString(KEY_Address,homeaddress);
          editor.putString(KEY_Password,password);
-
          editor.commit();
     }
+
+    public void SaveLatlong(String lat , String lng ,String Appartment){
+
+        editor.putString(KEY_Lat,lat);
+        editor.putString(KEY_Long , lng);
+        editor.putString(KEY_Appartment , Appartment);
+        editor.commit();
+
+    }
+
 
     public void saveDeviceId(String deviceid){
 
@@ -146,12 +160,24 @@ return false;
         user.put(KEY_Company_Name, pref.getString(KEY_Company_Name, ""));
         user.put(KEY_Address, pref.getString(KEY_Address, ""));
         user.put(KEY_Town, pref.getString(KEY_Town, ""));
-
+        user.put(KEY_Appartment , pref.getString(KEY_Appartment , ""));
         user.put(KEY_Zip, pref.getString(KEY_Zip, ""));
         user.put(KEY_Phone, pref.getString(KEY_Phone, ""));
 
         return user;
     }
+
+    public HashMap<String , String> getLatLng(){
+
+        HashMap<String, String> latlng = new HashMap<String, String>();
+        latlng.put(KEY_Lat , pref.getString(KEY_Lat , ""));
+        latlng.put(KEY_Long , pref.getString(KEY_Long , ""));
+        latlng.put(KEY_Appartment , pref.getString(KEY_Appartment , ""));
+        return latlng;
+    }
+
+
+
 
     /**
      * Clear session details
@@ -161,8 +187,8 @@ return false;
         editor.clear();
         editor.commit();
         Toast.makeText(_context , "You are now Logged Out " , Toast.LENGTH_LONG).show();
-//        MainActivityWithicon.myaccount.setVisibility(View.VISIBLE);
-//        MainActivityWithicon.logoutuser.setVisibility(View.GONE);
+//        MainActivity.myaccount.setVisibility(View.VISIBLE);
+//        MainActivity.logoutuser.setVisibility(View.GONE);
 
     }
 
@@ -173,5 +199,8 @@ return false;
     public boolean isLoggedIn(boolean b){
         return pref.getBoolean(IS_LOGIN, false);
     }
+
+
+
 
 }

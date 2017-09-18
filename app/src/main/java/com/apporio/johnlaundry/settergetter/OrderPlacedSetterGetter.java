@@ -10,7 +10,7 @@ public class OrderPlacedSetterGetter {
     @SerializedName("result")
     public int result;
 
-    @SerializedName("msg")
-    public String msg;
+//    @SerializedName("msg")
+//    public String msg;
 
 }

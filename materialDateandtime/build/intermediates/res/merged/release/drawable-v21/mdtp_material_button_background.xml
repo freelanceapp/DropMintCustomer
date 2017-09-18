@@ -6,4 +6,4 @@
         android:id="@android:id/mask"
         android:drawable="@drawable/mdtp_material_button_selected" />
 
-</ripple><!-- From: file:/E:/android%20projects/Laundry%20Projects/new%20john%20Laundry%20App/New%20John%20Laundry/materialDateandtime/src/main/res/drawable-v21/mdtp_material_button_background.xml -->
+</ripple>

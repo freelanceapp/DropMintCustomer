@@ -13,4 +13,10 @@ public class EDIT_PROFILE_INNER_SETTER_GETTER {
     @SerializedName("home_address")
     public String home_address;
 
+    @SerializedName("latitude")
+    public String latitude;
+
+    @SerializedName("longitude")
+    public String longitude;
+
 }

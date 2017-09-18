@@ -15,7 +15,6 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import com.apporio.johnlaundry.database.DBManager;
-import com.apporio.johnlaundry.startUpScreen.MainActivityWithicon;
 
 /**
  * Created by samir on 09/07/15.
@@ -103,7 +102,8 @@ public class AdapterForListItemForBasket extends BaseAdapter {
 
                     if (value_no_of_unit > 1) {
                         finalViewHolder.no_of_unit_product.setText("" + (value_no_of_unit - 1));
-                        finalViewHolder1.gross_per_product.setText(df.format("" + ((value_no_of_unit - 1) * (Double.parseDouble(product_price_arr.get(position))))));
+                        double ddd = Double.parseDouble(df.format(((value_no_of_unit - 1) * (Double.parseDouble(product_price_arr.get(position))))));
+                        finalViewHolder1.gross_per_product.setText(""+df.format(ddd));
                       //  dbm.changeExsistingRowintable(productid_arr.get(position), "" + (Integer.parseInt(product_no_of_unit.get(position)) - 1));
                         product_no_of_unit.set(position ,""+(value_no_of_unit-1));
                         Log.e("category id",""+ product_cat_arr.get(position));
@@ -131,7 +131,8 @@ public class AdapterForListItemForBasket extends BaseAdapter {
                 public void onClick(View v) {
                       int value_no_of_unit = Integer.parseInt(finalViewHolder.no_of_unit_product.getText().toString());
                      finalViewHolder.no_of_unit_product.setText(""+(value_no_of_unit+1));
-                     finalViewHolder1.gross_per_product.setText(df.format("" + ((value_no_of_unit + 1) * (Double.parseDouble(product_price_arr.get(position))))));
+                    double ddd = Double.parseDouble(df.format(((value_no_of_unit + 1) * (Double.parseDouble(product_price_arr.get(position))))));
+                     finalViewHolder1.gross_per_product.setText(""+df.format(ddd));
                     product_no_of_unit.set(position, "" + (value_no_of_unit + 1));
                     Log.e("totalunits", "" + (Integer.parseInt(product_no_of_unit.get(position)) + 1));
                     Log.e("bvsqjghgvqj",""+(value_no_of_unit+1));

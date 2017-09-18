@@ -41,4 +41,3 @@
         style="@style/mdtp_ActionButton.Text"
         android:text="@string/mdtp_ok" />
 </LinearLayout>
-<!-- From: file:/E:/android%20projects/Laundry%20Projects/new%20john%20Laundry%20App/New%20John%20Laundry/materialDateandtime/src/main/res/layout/mdtp_done_button.xml --><!-- From: file:/E:/android%20projects/Laundry%20Projects/new%20john%20Laundry%20App/New%20John%20Laundry/materialDateandtime/build/intermediates/bundles/debug/res/layout/mdtp_done_button.xml -->

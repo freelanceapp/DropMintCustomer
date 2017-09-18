@@ -17,7 +17,7 @@
             android:layout_weight="0.5"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Same Day Charges"
-            android:id="@+id/textView11"
+            android:id="@+id/textView112334"
             android:textColor="@color/muted_blue"/>
         <LinearLayout
             android:layout_width="match_parent"

@@ -12,6 +12,7 @@ import com.apporio.johnlaundry.MenuModule.PriceList;
 import com.apporio.johnlaundry.R;
 import com.apporio.johnlaundry.settergetter.PriceListSetterGetter;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 /**
@@ -114,7 +115,9 @@ public class AdapterForPriceList extends BaseAdapter{
 
 
         Title.setText(prname);
-        price.setText("$ "+pPrice);
+        DecimalFormat df = new DecimalFormat("#0.00");
+        Double dd = Double.valueOf(pPrice);
+        price.setText("$ "+df.format(dd));
 
 
         return addView ;

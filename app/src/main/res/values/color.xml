@@ -6,4 +6,15 @@
     <color name="muted_white">#ffffff</color>
     <color name="muted_grey">#999999</color>
     <color name="muted_black">#000</color>
+
+
+    <color name="colorPrimary">#FF6D00</color>
+    <color name="colorPrimaryDark">#FF6D00</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccent">#FFD180</color>
+    <color name="btnBackground">#e7e7e7</color>
+
+
 </resources>

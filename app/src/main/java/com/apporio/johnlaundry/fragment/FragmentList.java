@@ -10,14 +10,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.NetworkError;
+import com.android.volley.NoConnectionError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.apporio.johnlaundry.activity.MainActivity;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.apporio.johnlaundry.R;
@@ -26,7 +31,6 @@ import com.apporio.johnlaundry.settergetter.OFFERS_MOST_INNERDATA;
 import com.apporio.johnlaundry.settergetter.OFFERS_SETTERGETTER;
 import com.apporio.johnlaundry.settergetter.Product_most_innerdata_washpress;
 import com.apporio.johnlaundry.settergetter.Product_setter_getter;
-import com.apporio.johnlaundry.startUpScreen.MainActivityWithicon;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -80,7 +84,7 @@ public class FragmentList extends Fragment {
     public static String CategoryId;
     DBManager dbm ;
 
-    MainActivityWithicon mainactivity = new MainActivityWithicon();
+    MainActivity mainactivity = new MainActivity();
     StringRequest sr;
     RequestQueue queue;
     public static final String MyPREFERENCES = "MyPrefs" ;
@@ -324,7 +328,13 @@ public class FragmentList extends Fragment {
                 //pDialog.dismiss();
                 Log.e("Sucess", "" + error.toString());
 //                Toast.makeText(getActivity(), "" +error, Toast.LENGTH_SHORT).show();
-
+                if (error instanceof NetworkError){
+                    Toast.makeText(getActivity(), "No Internet !!", Toast.LENGTH_SHORT).show();
+                }else if (error instanceof NoConnectionError){
+                    Toast.makeText(getActivity(), "No Internet", Toast.LENGTH_SHORT).show();
+                }else if (error instanceof TimeoutError){
+                    Toast.makeText(getActivity(), "Plz Try Again !!", Toast.LENGTH_SHORT).show();
+                }
             }
         })
         {

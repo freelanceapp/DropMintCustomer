@@ -24,7 +24,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="32dp"
-            android:background="@drawable/ok_white"
+            android:background="@drawable/order_placed"
             android:layout_weight="1"
             android:id="@+id/imageView2" />
     <FrameLayout
@@ -58,7 +58,7 @@
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:layout_height="32dp"
-            android:background="@drawable/cancel_blue"/>
+            android:background="@drawable/in_progress_white"/>
 
         <ImageView
             android:id="@+id/collectedimage"
@@ -66,7 +66,7 @@
             android:layout_weight="1"
             android:visibility="gone"
             android:layout_height="32dp"
-            android:background="@drawable/ok_white"/>
+            android:background="@drawable/in_progress_blue"/>
     </FrameLayout>
     <FrameLayout
         android:layout_width="match_parent"
@@ -99,7 +99,7 @@
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:layout_height="32dp"
-            android:background="@drawable/cancel_blue"/>
+            android:background="@drawable/delivered_white"/>
 
         <ImageView
             android:id="@+id/deliveredimage"
@@ -107,7 +107,7 @@
             android:layout_weight="1"
             android:visibility="gone"
             android:layout_height="32dp"
-            android:background="@drawable/ok_white"/>
+            android:background="@drawable/delivered_blue"/>
     </FrameLayout>
     <FrameLayout
         android:layout_width="20dp"

@@ -1,1 +1,1 @@
-include ':app', ':contextmenu', ':viewanimation', ':materialDateandtime', ':materialdialouge', ':facebook', ':appintro'
+include ':app', ':contextmenu', ':viewanimation', ':materialDateandtime', ':facebook', ':appintro', ':creditcarddesign'

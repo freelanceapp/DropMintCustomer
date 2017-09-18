@@ -40,4 +40,4 @@
     </LinearLayout>
 
     <include layout="@layout/mdtp_done_button" />
-</LinearLayout><!-- From: file:/E:/android%20projects/Laundry%20Projects/new%20john%20Laundry%20App/New%20John%20Laundry/materialDateandtime/src/main/res/layout-land/mdtp_date_picker_dialog.xml -->
+</LinearLayout>

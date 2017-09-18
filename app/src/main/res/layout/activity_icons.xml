@@ -5,17 +5,17 @@
     android:orientation="vertical">
 
 
-    <include layout="@layout/action_bar_layout_mian"/>
+    <include layout="@layout/action_for_home"/>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"></View>
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0.5dp"></View>-->
 
 
     <android.support.design.widget.TabLayout
         android:id="@+id/tabs"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         app:tabMode="scrollable"
         app:tabMinWidth="60dp"
         app:tabTextColor="@color/muted_white"
@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:layout_weight="1"/>
+        android:layout_weight="0.9" />
 
     <!--<com.astuetz.PagerSlidingTabStrip-->
         <!--android:id="@+id/tabs"-->
@@ -43,7 +43,20 @@
 
         <!--</android.support.v4.view.ViewPager>-->
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_color"
+        >
+
     <include layout="@layout/cart_layot"
         android:id="@+id/cartlayot"/>
+
+     <include layout="@layout/instant_layout_order"
+         android:id="@+id/instantlayot"
+         />
+
+
+    </FrameLayout>
 
 </LinearLayout>

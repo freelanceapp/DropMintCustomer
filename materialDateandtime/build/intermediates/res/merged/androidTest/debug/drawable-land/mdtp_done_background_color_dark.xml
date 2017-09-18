@@ -22,4 +22,4 @@
           android:drawable="@color/mdtp_red" />
 
     <item android:drawable="@color/mdtp_dark_gray" />
-</selector><!-- From: file:/E:/android%20projects/Laundry%20Projects/new%20john%20Laundry%20App/New%20John%20Laundry/materialDateandtime/src/main/res/drawable-land/mdtp_done_background_color_dark.xml --><!-- From: file:/E:/android%20projects/Laundry%20Projects/new%20john%20Laundry%20App/New%20John%20Laundry/materialDateandtime/build/intermediates/bundles/debug/res/drawable-land/mdtp_done_background_color_dark.xml -->
+</selector>

@@ -1,19 +1,65 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context="com.apporio.johnlaundry.AccountModule.SignUpActivity">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
-    <include layout="@layout/action_bar_with_back_btn"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:id="@+id/login_background_in_hellofacebook_Activity"
+        android:background="@drawable/login_back_img"/>
+
+
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/main_ui_container">
+            <LinearLayout
+                android:id="@+id/back_button_on_action_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/back_button_how_it_works"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/left_arrow"
+                    />
+            </LinearLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                >
 
 
-    <include layout="@layout/sign_up_layout_new"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_up_logo"
+                    android:layout_gravity="center"
+                    />
 
+
+            </FrameLayout>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="vertical"
+                 android:layout_marginTop="10dp">
+
+            <include layout="@layout/sign_up_layout_new"/>
+             </LinearLayout>
+
+        </LinearLayout>
     </ScrollView>
-
-</LinearLayout>
+</FrameLayout>

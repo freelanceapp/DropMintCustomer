@@ -5,9 +5,12 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.NetworkError;
+import com.android.volley.NoConnectionError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.apporio.johnlaundry.settergetter.AddDeviceResult;
@@ -45,7 +48,7 @@ public class Parsing_Add_Device_Id {
                     deviceResult=gson.fromJson(response,AddDeviceResult.class);
 
                     if (deviceResult.result.equals("1")){
-                          Toast.makeText(DeviceIDActivity, "" + deviceResult.msg, Toast.LENGTH_LONG).show();
+                        //  Toast.makeText(DeviceIDActivity, "" + deviceResult.msg, Toast.LENGTH_LONG).show();
 
                     }else {
                         Toast.makeText(DeviceIDActivity, "" + deviceResult.msg, Toast.LENGTH_LONG).show();
@@ -63,7 +66,13 @@ public class Parsing_Add_Device_Id {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                if (error instanceof NetworkError){
+                    Toast.makeText(DeviceIDActivity, "No Internet !!", Toast.LENGTH_SHORT).show();
+                }else if (error instanceof NoConnectionError){
+                    Toast.makeText(DeviceIDActivity, "No Internet", Toast.LENGTH_SHORT).show();
+                }else if (error instanceof TimeoutError){
+                    Toast.makeText(DeviceIDActivity, "Plz Try Again !!", Toast.LENGTH_SHORT).show();
+                }
                 Log.e("error add device", "" + error);
 
             }

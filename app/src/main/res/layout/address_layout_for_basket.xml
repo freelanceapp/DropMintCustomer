@@ -67,11 +67,10 @@
 
 
 
-            <EditText
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:hint="Home Address"
                 android:gravity="center|left"
                 android:layout_marginLeft="10dp"
                 android:background="@android:color/transparent"

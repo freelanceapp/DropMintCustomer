@@ -71,4 +71,4 @@
         android:textSize="@dimen/mdtp_selected_date_year_size"
         tools:text="2015" />
 
-</LinearLayout><!-- From: file:/E:/android%20projects/Laundry%20Projects/new%20john%20Laundry%20App/New%20John%20Laundry/materialDateandtime/src/main/res/layout/mdtp_date_picker_selected_date.xml -->
+</LinearLayout>

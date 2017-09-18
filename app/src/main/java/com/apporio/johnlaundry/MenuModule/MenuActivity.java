@@ -9,13 +9,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.apporio.johnlaundry.startUpScreen.SplashActivity;
-import com.facebook.AccessToken;
-import com.facebook.login.LoginManager;
-import com.apporio.johnlaundry.AccountModule.HelloFacebookSampleActivity;
+//import com.facebook.AccessToken;
+//import com.facebook.login.LoginManager;
 import com.apporio.johnlaundry.IntroModule.HowItWorks;
 import com.apporio.johnlaundry.R;
 import com.apporio.johnlaundry.ordersHistory.PreviousOrderActivity;
-import com.apporio.johnlaundry.startUpScreen.MainActivityWithicon;
+import com.apporio.johnlaundry.activity.MainActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -83,17 +82,17 @@ public class MenuActivity extends Activity {
                     settingsview.setVisibility(View.GONE);
                     signout.setVisibility(View.GONE);
 
-                  MainActivityWithicon.activity.finish();
+                  MainActivity.activity.finish();
 
 
-                    if (AccessToken.getCurrentAccessToken() != null){
-                        LoginManager.getInstance().logOut();
-                        sm.logoutUser();
-                        Intent i=new Intent(getApplicationContext(),SplashActivity.class);
-                        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivity(i);
-                        finish();
-                    }else{
+//                    if (AccessToken.getCurrentAccessToken() != null){
+//                        LoginManager.getInstance().logOut();
+//                        sm.logoutUser();
+//                        Intent i=new Intent(getApplicationContext(),SplashActivity.class);
+//                        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                        startActivity(i);
+//                        finish();
+//                    }else{
                         sm.logoutUser();
                         Intent i=new Intent(getApplicationContext(),SplashActivity.class);
                         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -103,7 +102,7 @@ public class MenuActivity extends Activity {
 
                     }
 
-                }
+                //}
             });
 
         }

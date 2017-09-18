@@ -13,7 +13,6 @@ import com.android.volley.toolbox.StringRequest;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
-import com.apporio.johnlaundry.AccountModule.FbgoogleLogin;
 import com.apporio.johnlaundry.AccountModule.SignUpActivity;
 import com.apporio.johnlaundry.MenuModule.SettingsActivity;
 import com.apporio.johnlaundry.R;
@@ -74,7 +73,7 @@ public class ParcingOfFblogin {
 
                     ArrayAdapter adapter = new ArrayAdapter(activity, R.layout.auto_complete_layout, R.id.mobcode,descp);
 
-                    FbgoogleLogin.HomeAddress_text.setAdapter(adapter);
+               //     FbgoogleLogin.HomeAddress_text.setAdapter(adapter);
 
                 } catch (JsonSyntaxException e) {
                     e.printStackTrace();

@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="20dp">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-
-        <LinearLayout
+  <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@drawable/edit_text_focus"
-            android:padding="10dp">
+             android:padding="10dp"
+             >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -23,31 +13,30 @@
                 android:orientation="horizontal"
                 android:gravity="center">
 
-
                 <ImageView
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:background="@drawable/create_icon"/>
+                    android:background="@drawable/sign_up_name"/>
                 <EditText
                     android:id="@+id/firstname_registration"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/action_bar_heidgt"
                     android:hint="First Name"
+                    android:textColorHint="@color/muted_grey"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:gravity="center|left"
                     android:paddingLeft="10dp"
                     android:imeOptions="actionNext"
                     android:singleLine="true"
+                    android:textColor="@color/muted_white"
                     android:background="@android:color/transparent"/>
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.2dp"
-                android:background="#bbbbbb"
+                android:background="@color/muted_white"
                 android:layout_marginTop="5dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
                 android:layout_marginBottom="5dp"/>
 
             <LinearLayout
@@ -60,7 +49,7 @@
                 <ImageView
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:background="@drawable/create_icon"/>
+                    android:background="@drawable/sign_up_name"/>
 
                 <EditText
                     android:id="@+id/lastname_registration"
@@ -69,17 +58,18 @@
                 android:hint="Last Name"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:gravity="center|left"
-                android:paddingLeft="10dp"
+                    android:paddingLeft="10dp"
                     android:imeOptions="actionNext"
                     android:singleLine="true"
-
+                    android:textColor="@color/muted_white"
+                    android:textColorHint="@color/muted_grey"
                     android:background="@android:color/transparent"/>
 </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
-                android:background="#bbbbbb"
+                android:background="@color/muted_white"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"/>
 
@@ -94,7 +84,7 @@
                 <ImageView
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:background="@drawable/email_icon"/>
+                    android:background="@drawable/login_mail"/>
 
 
                 <EditText
@@ -106,7 +96,8 @@
                     android:gravity="center|left"
                     android:imeOptions="actionNext"
                     android:singleLine="true"
-
+                    android:textColorHint="@color/muted_grey"
+                    android:textColor="@color/muted_white"
                     android:paddingLeft="10dp"
                     android:background="@android:color/transparent"/>
 
@@ -115,7 +106,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
-                android:background="#bbbbbb"
+                android:background="@color/muted_white"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"/>
 
@@ -130,21 +121,21 @@
                 <ImageView
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:background="@drawable/mobile_icon"/>
+                    android:background="@drawable/signup_phone"/>
 
                 <EditText
                     android:id="@+id/mobile_no_registration"
-
+                    android:textColorHint="@color/muted_grey"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/action_bar_heidgt"
-                    android:hint="Mobile No."
+                    android:hint="Phone Number"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:gravity="center|left"
                     android:paddingLeft="10dp"
                     android:inputType="phone"
                     android:imeOptions="actionNext"
                     android:singleLine="true"
-
+                    android:textColor="@color/muted_white"
                     android:background="@android:color/transparent"/>
 
             </LinearLayout>
@@ -153,12 +144,9 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
-                android:background="#bbbbbb"
+                android:background="@color/muted_white"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"/>
-
-
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -179,11 +167,11 @@
                     android:hint="Home Address"
                     android:gravity="center|left"
                     android:paddingLeft="10dp"
-                    android:textColor="#000"
                     android:layout_weight="1"
+                    android:textColorHint="@color/muted_grey"
                     android:imeOptions="actionNext"
                     android:singleLine="true"
-
+                    android:textColor="@color/muted_white"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:background="@android:color/transparent">
 
@@ -191,10 +179,48 @@
 
 
             </LinearLayout>
-            <View
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/muted_white"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/appartment"/>
+
+        <EditText
+            android:id="@+id/appartment"
+            android:textColorHint="@color/muted_grey"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/action_bar_heidgt"
+            android:hint="Apartment or Room Number"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:textColor="@color/muted_white"
+            android:imeOptions="actionNext"
+            android:singleLine="true"
+
+            android:background="@android:color/transparent"/>
+
+    </LinearLayout>
+
+
+    <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
-                android:background="#bbbbbb"
+                android:background="@color/muted_white"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"/>
 
@@ -209,7 +235,7 @@
                 <ImageView
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:background="@drawable/password"/>
+                    android:background="@drawable/login_password"/>
 
                 <EditText
                     android:id="@+id/password_registration"
@@ -221,7 +247,8 @@
                     android:paddingLeft="10dp"
                     android:imeOptions="actionNext"
                     android:singleLine="true"
-
+                    android:textColorHint="@color/muted_grey"
+                    android:textColor="@color/muted_white"
                     android:inputType="textPassword"
                     android:background="@android:color/transparent"/>
 
@@ -229,7 +256,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
-                android:background="#bbbbbb"
+                android:background="@color/muted_white"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"/>
 
@@ -244,7 +271,7 @@
                 <ImageView
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:background="@drawable/password"/>
+                    android:background="@drawable/login_password"/>
 
                 <EditText
                     android:id="@+id/confirm_Password_Registration"
@@ -255,25 +282,28 @@
                     android:gravity="center|left"
                     android:imeOptions="actionNext"
                     android:singleLine="true"
-
+                    android:textColorHint="@color/muted_grey"
                     android:inputType="textPassword"
+                    android:textColor="@color/muted_white"
                     android:paddingLeft="10dp"
                     android:background="@android:color/transparent"/>
 
             </LinearLayout>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Sign Up"
+        android:id="@+id/continue_button_in_sign_up_activity"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:textColor="@color/muted_white"
+        android:background="@drawable/signupbackll" />
+
+
         </LinearLayout>
 
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Continue"
-            android:id="@+id/continue_button_in_sign_up_activity"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"
-            android:textColor="#ffffff"
-            android:background="@drawable/loginbuttonbackground" />
-    </LinearLayout>
 
-</ScrollView>
+
+

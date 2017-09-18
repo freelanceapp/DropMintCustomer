@@ -20,4 +20,4 @@
      android:layout_height="@dimen/mdtp_date_picker_view_animator_height"
      android:gravity="center"
      android:paddingLeft="8dp"
-     android:paddingRight="8dp" /><!-- From: file:/E:/android%20projects/Laundry%20Projects/new%20john%20Laundry%20App/New%20John%20Laundry/materialDateandtime/src/main/res/layout/mdtp_date_picker_view_animator.xml --><!-- From: file:/E:/android%20projects/Laundry%20Projects/new%20john%20Laundry%20App/New%20John%20Laundry/materialDateandtime/build/intermediates/bundles/debug/res/layout/mdtp_date_picker_view_animator.xml -->
+     android:paddingRight="8dp" />

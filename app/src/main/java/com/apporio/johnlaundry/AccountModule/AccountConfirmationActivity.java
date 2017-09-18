@@ -48,7 +48,7 @@ public class AccountConfirmationActivity extends Activity {
 
                 if(checkpassword()){
                     HelloFacebookSampleActivity.HelloFacebookActiviy.finish();
-                    SignUpActivity.SignUpActivity.finish();
+                    SignUpActivity.Signupactivity.finish();
                     finish();
                 }else {
                     Toaster.generatemessage(AccountConfirmationActivity.this , "Password doesn't match");

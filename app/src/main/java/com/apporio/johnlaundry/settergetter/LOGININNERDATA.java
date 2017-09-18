@@ -31,4 +31,14 @@ public class LOGININNERDATA {
     @SerializedName("status")
     public String status;
 
+    @SerializedName("latitude")
+    public String latitude;
+
+    @SerializedName("longitude")
+    public String longitude;
+
+    @SerializedName("appartment")
+    public String appartment;
+
+
 }

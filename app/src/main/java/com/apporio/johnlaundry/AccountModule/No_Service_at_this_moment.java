@@ -12,9 +12,12 @@ import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.NetworkError;
+import com.android.volley.NoConnectionError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.apporio.johnlaundry.utils.URLS;
@@ -138,7 +141,13 @@ public class No_Service_at_this_moment extends Activity {
             public void onErrorResponse(VolleyError error) {
                 pDialog.dismiss();
                 Toast.makeText(No_Service_at_this_moment.this, "Error", Toast.LENGTH_SHORT).show();
-
+                if (error instanceof NetworkError){
+                    Toast.makeText(No_Service_at_this_moment.this, "No Internet !!", Toast.LENGTH_SHORT).show();
+                }else if (error instanceof NoConnectionError){
+                    Toast.makeText(No_Service_at_this_moment.this, "No Internet", Toast.LENGTH_SHORT).show();
+                }else if (error instanceof TimeoutError){
+                    Toast.makeText(No_Service_at_this_moment.this, "Plz Try Again !!", Toast.LENGTH_SHORT).show();
+                }
             }
         }) {
             @Override

@@ -14,11 +14,15 @@ import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.NetworkError;
+import com.android.volley.NoConnectionError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.apporio.johnlaundry.R;
@@ -37,6 +41,7 @@ public class RevisedOrderActivity extends Activity {
 
     TextView ActivityTextView,ok_order;
     LinearLayout backLayout;
+    LinearLayout txt_inst_order ;
 
     TextView pickupaddress,pickupdate,pickuptime,deliveryaddress,deliverytime,deliverydate,orderdate,deliverynote,totalprice,
     totalquantity;
@@ -56,9 +61,10 @@ public class RevisedOrderActivity extends Activity {
         setContentView(R.layout.activity_revised_order);
 
         backLayout=(LinearLayout)findViewById(R.id.back_button_on_action_bar);
+        txt_inst_order = (LinearLayout)findViewById(R.id.txt_cart_instant);
         ActivityTextView=(TextView)findViewById(R.id.activity_name_on_Action_bar);
         backLayout.setVisibility(View.VISIBLE);
-        ActivityTextView.setText("Revised Order");
+        ActivityTextView.setText("Order Details");
         ok_order=(TextView)findViewById(R.id.ok_order);
         pDialog = new ProgressDialog(RevisedOrderActivity.this);
         pDialog.setMessage("Please wait...");
@@ -104,7 +110,7 @@ public class RevisedOrderActivity extends Activity {
     public  void ViewRevisedOrder(final Context RidesInfo, String Orderid) {
         String RideInfoURL = URLS.ViewRevisedOrder.concat(Orderid);
         RideInfoURL = RideInfoURL.replace(" ", "%20");
-        Log.e("", "" + RideInfoURL);
+        Log.e("order details url", "" + RideInfoURL);
 
         RequestQueue queue = VolleySingleton.getInstance(RidesInfo).getRequestQueue();
 
@@ -131,21 +137,32 @@ public class RevisedOrderActivity extends Activity {
                         deliverydate.setText(Rresponse.getResponse().getMessage().getDelivery_date());
                         orderdate.setText(Rresponse.getResponse().getMessage().getOrder_date());
                         deliverynote.setText(Rresponse.getResponse().getMessage().getDelivery_notes());
-                        totalprice.setText(Rresponse.getResponse().getMessage().getTotal_prize());
+                        totalprice.setText(Rresponse.getResponse().getMessage().getPayment_amount());
                         totalquantity.setText(Rresponse.getResponse().getMessage().getTotal_quantity());
 
-                       products = Rresponse.getResponse().getMessage().getItemdetails();
 
-                        for (int i = 0 ; i < products.size() ; i++ ){
-                       pr_id.add(products.get(i).getProductId());
-                       pr_name.add(products.get(i).getName());
-                       pr_price.add(products.get(i).getPrice());
-                       pr_quantity.add(products.get(i).getQuantity());
+                        if (Rresponse.getResponse().getMessage().getItemdetails().isEmpty()){
 
+                            itemdetails_List.setVisibility(View.GONE);
+                            txt_inst_order.setVisibility(View.VISIBLE);
+
+                        }else {
+                            products = Rresponse.getResponse().getMessage().getItemdetails();
+                            itemdetails_List.setVisibility(View.VISIBLE);
+                            txt_inst_order.setVisibility(View.GONE);
+                            for (int i = 0 ; i < products.size() ; i++ ){
+                                pr_id.add(products.get(i).getProductId());
+                                pr_name.add(products.get(i).getName());
+                                pr_price.add(products.get(i).getPrice());
+                                pr_quantity.add(products.get(i).getQuantity());
+
+                            }
+
+                            itemdetails_List.setAdapter(new Adapter_items_details(RevisedOrderActivity.this,pr_id,pr_name,pr_price,pr_quantity));
+                            setListViewHeightBasedOnChildren(itemdetails_List);
                         }
 
-                     itemdetails_List.setAdapter(new Adapter_items_details(RevisedOrderActivity.this,pr_id,pr_name,pr_price,pr_quantity));
-                        setListViewHeightBasedOnChildren(itemdetails_List);
+
 
                     } else {
 
@@ -162,6 +179,13 @@ public class RevisedOrderActivity extends Activity {
             public void onErrorResponse(VolleyError error) {
                 Log.e("error", "revised order error" + error);
                 pDialog.dismiss();
+                if (error instanceof NetworkError){
+                    Toast.makeText(RevisedOrderActivity.this, "No Internet !!", Toast.LENGTH_SHORT).show();
+                }else if (error instanceof NoConnectionError){
+                    Toast.makeText(RevisedOrderActivity.this, "No Internet", Toast.LENGTH_SHORT).show();
+                }else if (error instanceof TimeoutError){
+                    Toast.makeText(RevisedOrderActivity.this, "Plz Try Again !!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
         request.setRetryPolicy(new DefaultRetryPolicy(50000,

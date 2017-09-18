@@ -15,9 +15,12 @@ import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.NetworkError;
+import com.android.volley.NoConnectionError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.google.gson.Gson;
@@ -121,6 +124,15 @@ public class PriceList extends Activity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e("Sucess", "" + error.toString());
+
+                if (error instanceof NetworkError){
+                    Toast.makeText(PriceList.this, "No Internet !!", Toast.LENGTH_SHORT).show();
+                }else if (error instanceof NoConnectionError){
+                    Toast.makeText(PriceList.this, "No Internet", Toast.LENGTH_SHORT).show();
+                }else if (error instanceof TimeoutError){
+                    Toast.makeText(PriceList.this, "Plz Try Again !!", Toast.LENGTH_SHORT).show();
+                }
+
             }
         }){
             @Override

@@ -31,7 +31,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Pickup Details"
+                    android:text="Pick Up Details"
                     android:gravity="center"
                     android:textSize="18dp"
                     android:textColor="@color/muted_blue"
@@ -46,7 +46,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Picked up Address :"
+                        android:text="Pick Up Address :"
                         android:textStyle="bold"
                         android:layout_weight="1"
                         android:textColor="@color/muted_grey"/>
@@ -68,7 +68,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Picked up Date :"
+                        android:text="Pick Up Date :"
                         android:textStyle="bold"
                         android:layout_weight="1"
                         android:textColor="@color/muted_grey"/>
@@ -91,7 +91,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Picked up Time :"
+                        android:text="Pick Up Time :"
                         android:textStyle="bold"
                         android:layout_weight="1"
                         android:textColor="@color/muted_grey"/>
@@ -206,6 +206,52 @@
                     android:textColor="@color/muted_blue"
                     android:textSize="18dp"/>
 
+                <LinearLayout
+                    android:id="@+id/txt_cart_instant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/head"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Instant Order"
+                        android:gravity="center|left"
+                        android:textColor="@color/muted_blue"
+                        android:textColorHint="@color/muted_grey"
+                        android:visibility="visible"
+                        android:layout_gravity="center"/>
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:src="@drawable/inst_img"/>
+
+
+
+                    <TextView
+                        android:id="@+id/bo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="No need to add items to your basket builder , so here is no details :)"
+                        android:gravity="center|left"
+                        android:textColor="@color/muted_blue"
+                        android:textColorHint="@color/muted_grey"
+                        android:visibility="gone"
+                        />
+
+
+                </LinearLayout>
+
+
+
                 <ListView
                     android:id="@+id/item_details_list"
                     android:layout_width="match_parent"
@@ -290,7 +336,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Order date :"
+                        android:text="Order Date :"
                         android:textStyle="bold"
                         android:layout_weight="1"
                         android:textColor="@color/muted_grey"/>
@@ -313,7 +359,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Delivery note :"
+                        android:text="Delivery Note :"
                         android:textStyle="bold"
                         android:layout_weight="1"
                         android:textColor="@color/muted_grey"/>

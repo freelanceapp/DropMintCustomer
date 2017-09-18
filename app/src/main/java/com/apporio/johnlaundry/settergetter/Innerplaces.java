@@ -10,4 +10,7 @@ public class Innerplaces {
     @SerializedName("description")
     public String description;
 
+    @SerializedName("place_id")
+    public String place_id;
+
 }

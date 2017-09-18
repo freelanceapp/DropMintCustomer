@@ -13,9 +13,12 @@ import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.NetworkError;
+import com.android.volley.NoConnectionError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.apporio.johnlaundry.settergetter.Order_details_in_order_history;
@@ -240,7 +243,7 @@ public class PreviousOrderActivity extends Activity {
 
                         items_quantity_list.add(vieworder_most_innerdatalist.get(i).total_quantity);
                         deliverydate_list.add(vieworder_most_innerdatalist.get(i).delivery_date);
-                        cost_list.add(vieworder_most_innerdatalist.get(i).total_prize);
+                        cost_list.add(vieworder_most_innerdatalist.get(i).payment_amount);
                         order_no_list.add(vieworder_most_innerdatalist.get(i).order_id);
                         delivery_time_list.add(vieworder_most_innerdatalist.get(i).delivery_time);
                         ItemStatus_list.add(vieworder_most_innerdatalist.get(i).order_status);
@@ -331,6 +334,13 @@ public class PreviousOrderActivity extends Activity {
             public void onErrorResponse(VolleyError error) {
                 pDialog.dismiss();
                 Log.e("vieworder_error", "" + error);
+                if (error instanceof NetworkError){
+                    Toast.makeText(PreviousOrderActivity.this, "No Internet !!", Toast.LENGTH_SHORT).show();
+                }else if (error instanceof NoConnectionError){
+                    Toast.makeText(PreviousOrderActivity.this, "No Internet", Toast.LENGTH_SHORT).show();
+                }else if (error instanceof TimeoutError){
+                    Toast.makeText(PreviousOrderActivity.this, "Plz Try Again !!", Toast.LENGTH_SHORT).show();
+                }
             }
         }){
             @Override

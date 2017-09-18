@@ -119,19 +119,19 @@ public class DBManager {
 
     }
 
-    public static List<CartTable> getproductsaccordingcategory(String categoryid,String id){
+    public static List<CartTable> getproductsaccordingcategory(String categoryid){
 
         List<CartTable> productscat;
         productscat =  CartTable.find(CartTable.class, "category_Id = ?",categoryid);
 
-        List<CartTable> productscat1;
-        productscat1 =  CartTable.find(CartTable.class, "category_Id = ?",id);
+//        List<CartTable> productscat1;
+//        productscat1 =  CartTable.find(CartTable.class, "category_Id = ?",id);
 
-        List<CartTable> productscat2=new ArrayList<>();
-        productscat2.addAll(productscat);
-        productscat2.addAll(productscat1);
+//        List<CartTable> productscat2=new ArrayList<>();
+//        productscat2.addAll(productscat);
+//        productscat2.addAll(productscat1);
 
-        return productscat2;
+        return productscat;
 
     }
 

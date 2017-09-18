@@ -6,9 +6,9 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/appintro/appintro.iml" filepath="$PROJECT_DIR$/appintro/appintro.iml" />
       <module fileurl="file://$PROJECT_DIR$/contextmenu/contextmenu.iml" filepath="$PROJECT_DIR$/contextmenu/contextmenu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/creditcarddesign/creditcarddesign.iml" filepath="$PROJECT_DIR$/creditcarddesign/creditcarddesign.iml" />
       <module fileurl="file://$PROJECT_DIR$/facebook/facebook.iml" filepath="$PROJECT_DIR$/facebook/facebook.iml" />
       <module fileurl="file://$PROJECT_DIR$/materialDateandtime/materialDateandtime.iml" filepath="$PROJECT_DIR$/materialDateandtime/materialDateandtime.iml" />
-      <module fileurl="file://$PROJECT_DIR$/materialdialouge/materialdialouge.iml" filepath="$PROJECT_DIR$/materialdialouge/materialdialouge.iml" />
       <module fileurl="file://$PROJECT_DIR$/viewanimation/viewanimation.iml" filepath="$PROJECT_DIR$/viewanimation/viewanimation.iml" />
     </modules>
   </component>

@@ -12,9 +12,12 @@ import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.NetworkError;
+import com.android.volley.NoConnectionError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.google.gson.Gson;
@@ -112,7 +115,7 @@ public class RegisterByPostCode extends Activity {
                     intent.putExtra("PINCODE", pincode);
                     startActivity(intent);
                     pDialog.dismiss();
-
+                    finish();
                 } else {
 
                     Intent intent = new Intent(RegisterByPostCode.this,No_Service_at_this_moment.class);
@@ -127,7 +130,13 @@ public class RegisterByPostCode extends Activity {
             public void onErrorResponse(VolleyError error) {
                 pDialog.dismiss();
                 Toast.makeText(RegisterByPostCode.this, "Error", Toast.LENGTH_SHORT).show();
-
+                if (error instanceof NetworkError){
+                    Toast.makeText(RegisterByPostCode.this, "No Internet !!", Toast.LENGTH_SHORT).show();
+                }else if (error instanceof NoConnectionError){
+                    Toast.makeText(RegisterByPostCode.this, "No Internet", Toast.LENGTH_SHORT).show();
+                }else if (error instanceof TimeoutError){
+                    Toast.makeText(RegisterByPostCode.this, "Plz Try Again !!", Toast.LENGTH_SHORT).show();
+                }
             }
         }) {
             @Override

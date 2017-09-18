@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.apporio.johnlaundry.R;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import com.apporio.johnlaundry.database.DBManager;
@@ -24,7 +25,7 @@ public class AdapterForEReceiptListActivity extends BaseAdapter {
     ArrayList<String>   productname_arr = new ArrayList<String>();
     ArrayList<String>   product_no_of_unit = new ArrayList<String>();
     ArrayList<String>   product_price_arr = new ArrayList<String>();
-
+    DecimalFormat df;
     DBManager dbm ;
 
     public AdapterForEReceiptListActivity(Context con , ArrayList<String> productid_arr , ArrayList<String>   productname_arr ,ArrayList<String>   no_of_unit ,ArrayList<String>   product_price_arr ){
@@ -72,8 +73,10 @@ public class AdapterForEReceiptListActivity extends BaseAdapter {
 
         viewHolder.product_name.setText(productname_arr.get(position));
         viewHolder.gross_per_product.setText("0");
+        df = new DecimalFormat("#0.00");
         viewHolder.no_of_unit_product.setText(product_no_of_unit.get(position));
-        viewHolder.gross_per_product.setText(""+ ((Integer.parseInt(product_no_of_unit.get(position))*(Double.parseDouble(product_price_arr.get(position))))));
+        double dd = ((Integer.parseInt(product_no_of_unit.get(position))*(Double.parseDouble(product_price_arr.get(position)))));
+        viewHolder.gross_per_product.setText(""+ df.format(dd));
         viewHolder.minus.setVisibility(View.GONE);
         viewHolder.plus.setVisibility(View.GONE);
         return rowView;

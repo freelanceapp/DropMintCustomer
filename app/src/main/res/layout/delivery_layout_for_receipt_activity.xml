@@ -116,12 +116,12 @@ Dubai, UAE "
             android:id="@+id/delivery_time"
             android:textColor="@color/muted_grey"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text=" PM"
-                android:textColor="@color/muted_grey"/>
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="?android:attr/textAppearanceSmall"-->
+                <!--android:text=" PM"-->
+                <!--android:textColor="@color/muted_grey"/>-->
 
         </LinearLayout>
     </LinearLayout>

@@ -52,7 +52,8 @@
                     android:layout_height="wrap_content"
                     android:text="$ "
                     android:gravity="center"
-                    android:textColor="#ffffff"/>
+                    android:textColor="#ffffff"
+                    android:visibility="gone"/>
 
                 <TextView
 
@@ -119,6 +120,7 @@
                     android:paddingTop="3dp"
                     android:paddingBottom="3dp"
                     android:textColor="@color/muted_white"
+                    android:visibility="gone"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </LinearLayout>
         </LinearLayout>
@@ -168,7 +170,8 @@
                     android:gravity="top"
                     android:paddingBottom="3dp"
                     android:textColor="@color/muted_white"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:visibility="gone"/>
             </LinearLayout>
         </LinearLayout>
         <include layout="@layout/order_graph_layout_for_previous_orders"/>

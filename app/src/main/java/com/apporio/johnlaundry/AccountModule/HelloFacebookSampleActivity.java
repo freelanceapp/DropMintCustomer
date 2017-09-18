@@ -18,16 +18,20 @@ import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.NetworkError;
+import com.android.volley.NoConnectionError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.apporio.johnlaundry.settergetter.ridedestsettergetter;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.apporio.johnlaundry.R;
 import com.apporio.johnlaundry.settergetter.LOGIN_SETTER_GETTER;
-import com.apporio.johnlaundry.startUpScreen.MainActivityWithicon;
+import com.apporio.johnlaundry.activity.MainActivity;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -42,12 +46,13 @@ import com.apporio.johnlaundry.utils.VolleySingleton;
 
 public class HelloFacebookSampleActivity extends FragmentActivity {
 
-    ImageView login_background ;
-    TextView  activityname,forgotpasswordtext ;
-    LinearLayout backbtn ;
+
+    TextView  forgotpasswordtext ;
+
     Button login;
     Button Signuptn ;
-
+    public static String lat;
+    public static String lng;
     //private final String PENDING_ACTION_BUNDLE_KEY = "com.spinno.laundryapp";
     //private PendingAction pendingAction = PendingAction.NONE;
 
@@ -92,7 +97,7 @@ public class HelloFacebookSampleActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.main);
-        HelloFacebookActiviy = this ;
+        HelloFacebookActiviy = HelloFacebookSampleActivity.this ;
         ActivityDetector.open_LoginActivity=true;
 
         sm = new SessionManager(HelloFacebookSampleActivity.this);
@@ -127,7 +132,7 @@ public class HelloFacebookSampleActivity extends FragmentActivity {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(HelloFacebookSampleActivity.this, "chala", Toast.LENGTH_SHORT).show();
-  //              Intent intent = new Intent(HelloFacebookSampleActivity.this,MainActivityWithicon.class);
+  //              Intent intent = new Intent(HelloFacebookSampleActivity.this,MainActivity.class);
     //            startActivity(intent);
                 blanktextboxes();
 
@@ -139,23 +144,22 @@ public class HelloFacebookSampleActivity extends FragmentActivity {
                @Override
                public void onClick(View v) {
                    startActivity(new Intent(HelloFacebookSampleActivity.this, RegisterByPostCode.class));
+                   finish();
                }
            });
 
-        login_background = (ImageView) findViewById(R.id.login_background_in_hellofacebook_Activity);
-           login_background.setImageResource(R.drawable.ironing_splash_banner);
 
-          activityname = (TextView)findViewById(R.id.activity_name_on_Action_bar);
-            activityname.setText("User Profile");
-
-
-        backbtn = (LinearLayout) findViewById(R.id.back_button_on_action_bar);
-                backbtn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        finish();
-                    }
-                });
+//          activityname = (TextView)findViewById(R.id.activity_name_on_Action_bar);
+//            activityname.setText("User Profile");
+//
+//
+//        backbtn = (LinearLayout) findViewById(R.id.back_button_on_action_bar);
+//                backbtn.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        finish();
+//                    }
+//                });
 
     }
     public void blanktextboxes() {
@@ -237,7 +241,7 @@ public class HelloFacebookSampleActivity extends FragmentActivity {
 
         String loginurl= URLS.loginurl.concat(email_values).concat(URLS.loginurl1).concat(password_values);
         loginurl=loginurl.replace(" ","%20");
-
+        Log.e("login url",""+loginurl);
 
         sr = new StringRequest(Request.Method.POST, loginurl, new Response.Listener<String>() {
             @Override
@@ -261,9 +265,13 @@ public class HelloFacebookSampleActivity extends FragmentActivity {
                     HomeAddress=loginsettergetter.logininnerdata.home_address;
                     Status=loginsettergetter.logininnerdata.status;
 
-                    sm.createLoginSession(UserId, FirstName, LastName, Email, PhoneNumber, HomeAddress, Password);
+                    sm.createLoginSession(UserId, FirstName, LastName, Email, PhoneNumber, HomeAddress, Password );
 
-                    Intent intent = new Intent(HelloFacebookSampleActivity.this, MainActivityWithicon.class);
+                   // GetLatLong(HomeAddress);
+
+                    sm.SaveLatlong(loginsettergetter.logininnerdata.latitude , loginsettergetter.logininnerdata.longitude,loginsettergetter.logininnerdata.appartment);
+
+                    Intent intent = new Intent(HelloFacebookSampleActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish();
 
@@ -280,8 +288,13 @@ public class HelloFacebookSampleActivity extends FragmentActivity {
             public void onErrorResponse(VolleyError error) {
                 pDialog.dismiss();
                 Log.e("Sucess", "" + error.toString());
-                Toast.makeText(HelloFacebookSampleActivity.this, "Please enter the email and password", Toast.LENGTH_SHORT).show();
-
+                if (error instanceof NetworkError){
+                    Toast.makeText(HelloFacebookActiviy, "No Internet !!", Toast.LENGTH_SHORT).show();
+                }else if (error instanceof NoConnectionError){
+                    Toast.makeText(HelloFacebookActiviy, "No Internet", Toast.LENGTH_SHORT).show();
+                }else if (error instanceof TimeoutError){
+                    Toast.makeText(HelloFacebookActiviy, "Plz Try Again !!", Toast.LENGTH_SHORT).show();
+                }
             }
         }) {
             @Override
@@ -319,4 +332,60 @@ public class HelloFacebookSampleActivity extends FragmentActivity {
         super.onBackPressed();
         finish();
     }
+
+
+    public void GetLatLong(String placeid){
+
+
+        String locationurl2 = "https://maps.googleapis.com/maps/api/place/details/json?placeid=" + placeid + "&key=AIzaSyCC3Ci--XByh-o-ukFw0IBOGD1of7hglA4";
+        locationurl2 = locationurl2.replace(" ", "%20");
+        Log.e("url", "" + locationurl2);
+
+        pDialog = new ProgressDialog(HelloFacebookSampleActivity.this);
+        pDialog.setMessage("Please wait...");
+        pDialog.setCancelable(false);
+
+
+        StringRequest sr2222 = new StringRequest(Request.Method.GET, locationurl2, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                pDialog.dismiss();
+                Log.e("", "" + response);
+                try {
+                    GsonBuilder gsonBuilder = new GsonBuilder();
+                    final Gson gson = gsonBuilder.create();
+
+                    ridedestsettergetter received2 = new ridedestsettergetter();
+                    received2 = gson.fromJson(response, ridedestsettergetter.class);
+
+
+                    lat = received2.innerdestination.geometry.location11.lat;
+                    lng = received2.innerdestination.geometry.location11.lng;
+
+
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Log.e("exception", "" + e);
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("exception", "" + error);
+                pDialog.dismiss();
+            }
+        });
+        sr2222.setRetryPolicy(new DefaultRetryPolicy(50000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        pDialog.show();
+        queue.add(sr2222);
+
+
+    }
+
+
+
 }

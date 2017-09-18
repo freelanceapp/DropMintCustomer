@@ -20,4 +20,4 @@
     <item android:state_pressed="false" android:state_selected="false"
         android:color="@color/mdtp_accent_color_focused"/>
 
-</selector><!-- From: file:/E:/android%20projects/Laundry%20Projects/new%20john%20Laundry%20App/New%20John%20Laundry/materialDateandtime/src/main/res/color/mdtp_date_picker_selector.xml --><!-- From: file:/E:/android%20projects/Laundry%20Projects/new%20john%20Laundry%20App/New%20John%20Laundry/materialDateandtime/build/intermediates/bundles/debug/res/color/mdtp_date_picker_selector.xml -->
+</selector>

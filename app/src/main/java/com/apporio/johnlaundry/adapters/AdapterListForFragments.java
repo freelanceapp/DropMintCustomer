@@ -15,10 +15,11 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.apporio.johnlaundry.startUpScreen.MainActivityWithicon;
+
+import com.apporio.johnlaundry.R;
+import com.apporio.johnlaundry.activity.MainActivity;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
-import com.apporio.johnlaundry.R;
 import com.squareup.picasso.Picasso;
 
 import java.text.DecimalFormat;
@@ -131,6 +132,17 @@ public class AdapterListForFragments extends BaseAdapter {
             @Override
             public void onClick(View v) {
 
+                Log.e("**rowsin database",""+dbm.countNoofRowsInDatabse());
+
+                if (dbm.countNoofRowsInDatabse()==0){
+                    MainActivity.cartlayot.setVisibility(View.VISIBLE);
+                    MainActivity.cartlayot.startAnimation(MainActivity.animShow);
+                    MainActivity.instantlayout.setVisibility(View.GONE);
+                    MainActivity.instantlayout.startAnimation(MainActivity.animHide);
+                }else {
+
+                }
+
                 YoYo.with(Techniques.Pulse)
                             .duration(200)
                             .playOn(finalViewHolder3.plusbtn);
@@ -155,6 +167,16 @@ public class AdapterListForFragments extends BaseAdapter {
             @Override
             public void onClick(View v) {
 
+//                if (dbm.countNoofRowsInDatabse()==0){
+//                    MainActivity.cartlayot.setVisibility(View.GONE);
+//                    MainActivity.cartlayot.startAnimation(MainActivity.animHide);
+//                    MainActivity.instantlayout.setVisibility(View.VISIBLE);
+//                    MainActivity.instantlayout.startAnimation(MainActivity.animShow);
+//                }else {
+//
+//                }
+
+
                 YoYo.with(Techniques.Pulse)
                         .duration(100)
                         .playOn(finalViewHolder3.minusbtn);
@@ -169,6 +191,17 @@ public class AdapterListForFragments extends BaseAdapter {
                         product_noofunit_arr.set(i ,""+(value-1));
                         // remove it from DB
                         dbm.removeItemfromDB(productid_list.get(i));
+
+                        if (dbm.countNoofRowsInDatabse()==0){
+                            MainActivity.cartlayot.setVisibility(View.GONE);
+                            MainActivity.cartlayot.startAnimation(MainActivity.animHide);
+                            MainActivity.instantlayout.setVisibility(View.VISIBLE);
+                            MainActivity.instantlayout.startAnimation(MainActivity.animShow);
+                        }else {
+                            MainActivity.cartlayot.setVisibility(View.VISIBLE);
+                        }
+
+
 
                     }if(value >1){
                         finalViewHolder.noofunit_product.setText("" + (value - 1));
